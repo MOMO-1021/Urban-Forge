@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const portfolioEntries = await getCollection('portfolio');
+  return portfolioEntries.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout title={`${entry.data.title} | The Urban Forge`} description={entry.data.description}>
+  <Header />
+
+  <!-- Hero Image Area -->
+  <div class="portfolio-hero bg-dark">
+    {entry.data.featuredImage ? (
+      <img src={entry.data.featuredImage} alt={entry.data.title} style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    ) : (
+      <div class="placeholder-hero-image">
+        <span>{entry.data.title}</span>
+      </div>
+    )}
+  </div>
+
+  <main class="container section portfolio-layout">
+    
+    <!-- Sidebar: Specs -->
+    <aside class="portfolio-specs">
+      <div class="spec-block">
+        <h3>Project</h3>
+        <p>{entry.data.title}</p>
+      </div>
+      
+      {entry.data.location && (
+        <div class="spec-block">
+          <h3>Location</h3>
+          <p>{entry.data.location}</p>
+        </div>
+      )}
+      
+      {entry.data.completionYear && (
+        <div class="spec-block">
+          <h3>Completion</h3>
+          <p>{entry.data.completionYear}</p>
+        </div>
+      )}
+      
+      {entry.data.materialsUsed && (
+        <div class="spec-block">
+          <h3>Materials</h3>
+          <ul>
+            {entry.data.materialsUsed.map((mat) => (
+              <li>{mat}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      
+      <div class="cta-block" style="margin-top: var(--spacing-xl);">
+        <h4>Interested in a similar piece?</h4>
+        <a href={`/contact?service=${entry.data.category.toLowerCase()}`} class="btn" style="width: 100%; text-align: center; margin-top: 0.5rem;">Inquire Now</a>
+      </div>
+      
+      {entry.data.hasCadDownload && (
+        <div class="cad-download bg-dark" style="margin-top: var(--spacing-lg); padding: var(--spacing-md); text-align: center;">
+          <h4 style="color: var(--color-off-white); margin-bottom: 0.5rem;">For Architects</h4>
+          <p style="color: #ccc; font-size: 0.9em; margin-bottom: 1rem;">Download technical CAD drawings for your projects.</p>
+          <a href="/downloads/urban-forge-cad.pdf" download="Urban_Forge_CAD_Specs.pdf" class="btn btn-secondary" style="color: var(--color-brushed-brass); border-color: var(--color-brushed-brass); width: 100%;">Download .PDF</a>
+        </div>
+      )}
+    </aside>
+
+    <!-- Main Content: Markdown -->
+    <article class="portfolio-content">
+      <header>
+        <span class="category">{entry.data.category}</span>
+        <h1>{entry.data.title}</h1>
+        <p class="lead">{entry.data.description}</p>
+      </header>
+      
+      <div class="prose">
+        <Content />
+      </div>
+    </article>
+    
+  </main>
+
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center;">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .portfolio-hero {
+    height: 50vh;
+    min-height: 400px;
+    width: 100%;
+    position: relative;
+  }
+  
+  .placeholder-hero-image {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-charcoal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.1);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .portfolio-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--spacing-xl);
+  }
+  
+  .portfolio-specs {
+    position: sticky;
+    top: 100px;
+    height: max-content;
+  }
+  
+  .spec-block {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .spec-block h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--color-brushed-brass);
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+  }
+  
+  .spec-block p, .spec-block ul {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-matte-black);
+    margin: 0;
+  }
+  
+  .spec-block ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category {
+    font-family: var(--font-heading);
+    color: var(--color-brushed-brass);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .portfolio-content h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+  }
+  
+  .prose :global(h2) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--color-matte-black);
+  }
+  
+  .prose :global(h3) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+  
+  .prose :global(p) {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .prose :global(ul) {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .prose :global(li) {
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 900px) {
+    .portfolio-layout {
+      grid-template-columns: 1fr;
+    }
+    .portfolio-specs {
+      position: static;
+      margin-bottom: var(--spacing-xl);
+      padding-bottom: var(--spacing-lg);
+      border-bottom: 2px solid var(--color-matte-black);
+    }
+  }
+</style>

@@ -1,0 +1,78 @@
+---
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="/">The Urban Forge</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/materials">Materials</a></li>
+        <li><a href="/contact" class="btn btn-secondary btn-sm">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<style>
+  .site-header {
+    background-color: var(--color-matte-black);
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo a {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-off-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .logo a:hover {
+    color: var(--color-brushed-brass);
+  }
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+  .main-nav a {
+    color: var(--color-off-white);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  .main-nav a:hover {
+    color: var(--color-brushed-brass);
+  }
+  
+  /* Make secondary button white until hover */
+  .btn-sm.btn-secondary {
+    padding: 0.5rem 1rem;
+    border-color: var(--color-brushed-brass);
+    color: var(--color-brushed-brass);
+    border-width: 1px;
+  }
+  .main-nav a.btn-sm.btn-secondary:hover {
+    background-color: var(--color-brushed-brass);
+    color: #ffffff !important;
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none; /* In a real app we would add a mobile menu toggle here */
+    }
+  }
+</style>

@@ -1,0 +1,78 @@
+﻿
+> urban-forge@0.0.1 build
+> astro build
+
+[2m12:38:25[22m [34m[content][39m Syncing content
+[2m12:38:25[22m [34m[content][39m Synced content
+[2m12:38:25[22m [34m[types][39m Generated [2m522ms[22m
+[2m12:38:25[22m [34m[build][39m output: [34m"static"[39m
+[2m12:38:25[22m [34m[build][39m mode: [34m"static"[39m
+[2m12:38:25[22m [34m[build][39m directory: [34mD:\SEO Porfolio Projects\Urban Forge\dist\[39m
+[2m12:38:25[22m [34m[build][39m Collecting build info...
+[2m12:38:25[22m [34m[build][39m [32mΓ£ô Completed in 537ms.[39m
+[2m12:38:25[22m [34m[build][39m Building static entrypoints...
+[33m[1m12:38:26[22m [WARN] [vite][39m [33m"matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/index.js".[39m
+[2m12:38:26[22m [34m[vite][39m [32mΓ£ô built in 1.03s[39m
+[2m12:38:26[22m [34m[vite][39m [32mΓ£ô built in 23ms[39m
+[2m12:38:26[22m [34m[build][39m Rearranging server assets...
+
+[42m[30m generating static routes [39m[49m
+node.exe : Missing 
+parameter: slug
+At line:1 char:1
++ & "C:\node-v24.14.0-
+win-x64/node.exe" "C:\
+node-v24.14.0-win-x64/
+node_ ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (Missing pa   
+ rameter: slug:Str    
+ing) [], RemoteEx    
+ception
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+  [1mLocation:[22m
+    [4mD:\SEO 
+Porfolio 
+Projects\Urban Forge\n
+ode_modules\astro\dist
+\core\routing\generato
+r.js:18:13[24m
+  [1mStack 
+trace:[22m
+[2m    at 
+getParameter (file:///
+D:/SEO%20Porfolio%20Pr
+ojects/Urban%20Forge/n
+ode_modules/astro/dist
+/core/routing/generato
+r.js:18:13)
+    at Array.map 
+(<anonymous>)
+    at file:///D:/SEO%
+20Porfolio%20Projects/
+Urban%20Forge/node_mod
+ules/astro/dist/core/r
+outing/generator.js:35
+:44
+    at file:///D:/SEO%
+20Porfolio%20Projects/
+Urban%20Forge/node_mod
+ules/astro/dist/core/r
+outing/generator.js:35
+:27
+    at 
+callGetStaticPaths (fi
+le:///D:/SEO%20Porfoli
+o%20Projects/Urban%20F
+orge/node_modules/astr
+o/dist/core/render/rou
+te-cache.js:39:23)[22
+m

@@ -1,0 +1,148 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Home">
+  <Header />
+  
+  <section class="hero-section">
+    <div class="video-background">
+      <!-- Replaced with client's actual video later -->
+      <video autoplay muted loop playsinline>
+        <!-- Placeholder, this would be a high-res locally hosted or CDN video -->
+        <source src="/hero-video-placeholder.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+    </div>
+    
+    <div class="hero-content container">
+      <h1>Custom Metalwork for the Discerning Eye.</h1>
+      <p>Luxury architectural hardware and bespoke metal fabrication for high-end residential and commercial spaces.</p>
+      <div class="cta-group">
+        <a href="/contact" class="btn">Book a Consultation</a>
+        <a href="/portfolio" class="btn btn-secondary white-btn">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2>Artisans of the Forge</h2>
+        <p>With a 20-year local reputation, we have evolved from traditional welders into true artisans. Our work is not mass-produced; each piece—from grand spiral staircases to intricate fireplace screens—is a unique expression of durability and design.</p>
+        <p>We partner with architects, interior designers, and discerning clients to bring visionary spaces to life through steel, brass, and aluminum craftsmanship.</p>
+      </div>
+      <div class="intro-image">
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/VH5gkQGTNfw" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Add simple footer for visual completion -->
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .hero-section {
+    position: relative;
+    height: 90vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--color-matte-black);
+  }
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.6); /* Matte black semi-transparent overlay */
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--color-off-white);
+    max-width: 800px;
+  }
+  .hero-content h1 {
+    color: var(--color-off-white);
+    font-size: clamp(3rem, 5vw, 5rem);
+    margin-bottom: var(--spacing-md);
+  }
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-body);
+    opacity: 0.9;
+  }
+  .cta-group {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+  .white-btn {
+    color: var(--color-off-white);
+    border-color: var(--color-off-white);
+  }
+  .white-btn:hover {
+    background-color: var(--color-off-white);
+    color: var(--color-matte-black);
+  }
+  
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  .intro-image {
+    width: 100%;
+  }
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-brushed-brass);
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

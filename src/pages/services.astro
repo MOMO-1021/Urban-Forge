@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+// Adding structured data (Schema) for Services
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Custom Metal Fabrication",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "The Urban Forge"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Local"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Metal Fabrication Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Railings"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Architectural Gates"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fireplace Surrounds"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bespoke Furniture"
+        }
+      }
+    ]
+  }
+};
+---
+
+<Layout title="Our Services">
+  <Header />
+  
+  <section class="page-header bg-dark">
+    <div class="container relative-z text-center">
+      <h1>Our Services</h1>
+      <p class="subtitle">Master-crafted architectural hardware for the discerning eye.</p>
+      
+      <div class="service-nav">
+        <a href="#railings" class="btn btn-secondary white-btn">Railings</a>
+        <a href="#gates" class="btn btn-secondary white-btn">Gates</a>
+        <a href="#fireplaces" class="btn btn-secondary white-btn">Fireplace Surrounds</a>
+        <a href="#furniture" class="btn btn-secondary white-btn">Furniture</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Railings -->
+    <section id="railings" class="service-section container">
+      <div class="service-content">
+        <h2>Custom Railings</h2>
+        <p>From sweeping central staircases to minimal, modern balcony guards, our custom railings blend structural integrity with breathtaking design. Whether you specify forged iron balusters or sleek brushed brass handrails, we fabricate to exact tolerances.</p>
+        <ul class="features">
+          <li>Precision CNC & Hand-forged components</li>
+          <li>Interior & Exterior applications</li>
+          <li>Compliance with latest building codes</li>
+        </ul>
+        <a href="/contact?service=railings" class="btn">Inquire About Railings</a>
+      </div>
+      <div class="service-image">
+        <img src="/images/railings.jpg" alt="Railings Portfolio Detail" />
+      </div>
+    </section>
+
+    <hr class="container divider" />
+
+    <!-- Gates -->
+    <section id="gates" class="service-section container reverse">
+      <div class="service-content">
+        <h2>Architectural Gates</h2>
+        <p>The first impression of an estate or commercial property starts here. We build monumental driveway gates and elegant pedestrian entries, integrating seamlessly with modern access control and automation systems.</p>
+        <ul class="features">
+          <li>Automated & Manual operations</li>
+          <li>Corrosion-resistant substrates</li>
+          <li>Artistic patinas & powder coats</li>
+        </ul>
+        <a href="/contact?service=gates" class="btn">Inquire About Gates</a>
+      </div>
+      <div class="service-image">
+        <img src="/images/gates.jpg" alt="Gates Portfolio Detail" />
+      </div>
+    </section>
+
+    <hr class="container divider" />
+
+    <!-- Fireplace Surrounds -->
+    <section id="fireplaces" class="service-section container">
+      <div class="service-content">
+        <h2>Fireplace Surrounds</h2>
+        <p>Transform a standard hearth into the defining centerpiece of a room. We specialize in hot-rolled steel paneling, custom-fitted screens, and intricately forged mantels designed to withstand intense thermal expansion while looking exquisite.</p>
+        <ul class="features">
+          <li>Heat-resistant specialized finishes</li>
+          <li>Custom screen weaving & mesh</li>
+          <li>Floor-to-ceiling cladding</li>
+        </ul>
+        <a href="/contact?service=fireplaces" class="btn">Inquire About Fireplaces</a>
+      </div>
+      <div class="service-image">
+        <img src="/images/fireplaces.jpg" alt="Fireplaces Portfolio Detail" />
+      </div>
+    </section>
+
+    <hr class="container divider" />
+
+    <!-- Furniture -->
+    <section id="furniture" class="service-section container reverse">
+      <div class="service-content">
+        <h2>Bespoke Furniture</h2>
+        <p>Limited-edition and custom commission pieces that explore the intersection of art and utility. We pair our metalwork with high-end glass, stone, and reclaimed wood to create imposing dining tables, sleek consoles, and statement hardware.</p>
+        <ul class="features">
+          <li>Mixed-media integration (Wood, Glass, Stone)</li>
+          <li>Unique sculptural designs</li>
+          <li>Commercial-grade durability</li>
+        </ul>
+        <a href="/contact?service=furniture" class="btn">Inquire About Furniture</a>
+      </div>
+      <div class="service-image">
+        <img src="/images/furniture.jpg" alt="Furniture Portfolio Detail" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center;">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+
+  <!-- JSON-LD Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-xxl) 0;
+    position: relative;
+    border-bottom: 2px solid var(--color-brushed-brass);
+  }
+  .relative-z {
+    position: relative;
+    z-index: 2;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .page-header h1 {
+    color: var(--color-brushed-brass);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: var(--spacing-sm);
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-off-white);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-lg);
+  }
+  .service-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+  .white-btn {
+    color: var(--color-off-white);
+    border-color: rgba(255,255,255,0.3);
+  }
+  .white-btn:hover {
+    background-color: var(--color-off-white);
+    color: var(--color-matte-black);
+    border-color: var(--color-off-white);
+  }
+  .service-section {
+    padding: var(--spacing-xl) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  .service-section.reverse {
+    direction: rtl; /* simple way to reverse on desktop */
+  }
+  .service-section.reverse > * {
+    direction: ltr; /* reset content */
+  }
+  .service-content h2 {
+    color: var(--color-matte-black);
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .service-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-brushed-brass);
+  }
+  .features {
+    list-style-type: square;
+    margin-left: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 600;
+  }
+  .features li {
+    margin-bottom: 0.5rem;
+  }
+  .service-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+    border: 1px solid var(--color-brushed-brass);
+    display: block;
+  }
+  .divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .service-section {
+      grid-template-columns: 1fr;
+      padding: var(--spacing-lg) 0;
+    }
+    .service-section.reverse {
+      direction: ltr;
+    }
+  }
+</style>

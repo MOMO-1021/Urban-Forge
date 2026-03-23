@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "The Urban Forge - Custom Metalwork for the Discerning Eye." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | The Urban Forge</title>
+		
+		<!-- Google Search Console -->
+		<meta name="google-site-verification" content="GSC-VERIFICATION-CODE-HERE" />
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+		
+		<!-- Google Analytics 4 (GA4) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-XXXXXXXXXX');
+		</script>
+		
+		<!-- Local Business Schema -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "The Urban Forge",
+			"image": "https://theurbanforge.com/logo.jpg",
+			"@id": "https://theurbanforge.com",
+			"url": "https://theurbanforge.com",
+			"telephone": "+1234567890",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "123 Industrial Way, Suite A",
+				"addressLocality": "Metalworks District",
+				"addressRegion": "CA",
+				"postalCode": "12345",
+				"addressCountry": "US"
+			},
+			"priceRange": "$$$$"
+		})} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

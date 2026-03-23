@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Exclude private draft or template paths from indexing
+Disallow: /drafts/
+
+Sitemap: https://theurbanforge.com/sitemap-index.xml

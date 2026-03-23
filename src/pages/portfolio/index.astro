@@ -1,0 +1,213 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { getCollection } from 'astro:content';
+
+const portfolioEntries = await getCollection('portfolio');
+---
+
+<Layout title="Our Work | Portfolio">
+  <Header />
+
+  <section class="portfolio-hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h1 class="elegant-title">Masterworks</h1>
+      <div class="golden-divider"></div>
+      <p class="elegant-subtitle">A curated selection of our most challenging and beautiful residential & commercial commissions, forged to endure.</p>
+    </div>
+  </section>
+
+  <main class="container section">
+    
+    <!-- Filter Navigation (Visual Only for now) -->
+    <div class="filter-nav">
+      <button class="btn btn-secondary active" data-filter="All Work">All Work</button>
+      <button class="btn btn-secondary" data-filter="Railings">Railings</button>
+      <button class="btn btn-secondary" data-filter="Gates">Gates</button>
+      <button class="btn btn-secondary" data-filter="Fireplaces">Fireplaces</button>
+      <button class="btn btn-secondary" data-filter="Furniture">Furniture</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-grid">
+      {portfolioEntries.map(entry => (
+        <a href={`/portfolio/${entry.id}`} class="portfolio-card" data-category={entry.data.category}>
+          <div class="image-container">
+            {entry.data.featuredImage ? (
+              <img src={entry.data.featuredImage} alt={entry.data.title} style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            ) : (
+              <div class="placeholder-image">
+                <span>{entry.data.category}</span>
+              </div>
+            )}
+          </div>
+          <div class="card-content">
+            <span class="category">{entry.data.category}</span>
+            <h2>{entry.data.title}</h2>
+            <p>{entry.data.location}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </main>
+
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center;">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .portfolio-hero {
+    position: relative;
+    padding: 8rem 0;
+    text-align: center;
+    background-image: url('/images/fireplaces.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Elegant subtle parallax */
+  }
+  .portfolio-hero .overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(26,26,26,0.85), rgba(26,26,26,0.98));
+    z-index: 1;
+  }
+  .portfolio-hero .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  .elegant-title {
+    color: var(--color-off-white);
+    font-size: clamp(3rem, 6vw, 5rem);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+  .golden-divider {
+    height: 2px;
+    width: 80px;
+    background-color: var(--color-brushed-brass);
+    margin: 2rem auto;
+  }
+  .elegant-subtitle {
+    font-size: 1.35rem;
+    color: #cccccc;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+  }
+
+  .filter-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-xl);
+  }
+  .filter-nav .active {
+    background-color: var(--color-matte-black);
+    color: var(--color-off-white);
+    border-color: var(--color-matte-black);
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .portfolio-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--color-brushed-brass);
+  }
+
+  .image-container {
+    height: 250px;
+    background-color: var(--color-charcoal);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.3);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .portfolio-card:hover .placeholder-image span {
+    color: var(--color-brushed-brass);
+  }
+
+  .card-content {
+    padding: var(--spacing-md);
+  }
+
+  .category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-brushed-brass);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-matte-black);
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-nav button');
+    const cards = document.querySelectorAll('.portfolio-card') as NodeListOf<HTMLElement>;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        cards.forEach(card => {
+          if (filter === 'All Work' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

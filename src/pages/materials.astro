@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Materials & Finishes">
+  <Header />
+  
+  <section class="page-header" style="background-color: var(--color-charcoal); color: var(--color-off-white); text-align: center; padding: var(--spacing-xxl) 0;">
+    <div class="container">
+      <h1 style="color: var(--color-off-white);">Materials & Finishes</h1>
+      <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Understanding the substrate and surface treatments that define our work.</p>
+    </div>
+  </section>
+
+  <main class="container section">
+    <div class="intro-text" style="max-width: 800px; margin: 0 auto var(--spacing-xl); text-align: center;">
+      <p>The foundation of every custom piece is the material itself. We specialize in working with architectural-grade metals, each offering unique structural properties and aesthetic possibilities. Our finishing techniques range from time-honored chemical patinas to state-of-the-art powder coatings.</p>
+    </div>
+
+    <!-- Base Metals -->
+    <h2 class="section-title">Base Metals</h2>
+    <div class="grid material-grid">
+      <div class="material-card">
+        <img class="color-swatch-img" src="/images/steel.jpg" alt="Mild & Hot-Rolled Steel" />
+        <h3>Mild & Hot-Rolled Steel</h3>
+        <p>The workhorse of architectural fabrication. Offers immense strength and a beautiful, organic "mill scale" texture when left exposed. Ideal for structural railings, monumental stairs, and raw industrial aesthetics.</p>
+      </div>
+      
+      <div class="material-card">
+        <img class="color-swatch-img" src="/images/brass.jpg" alt="Architectural Brass & Bronze" />
+        <h3>Architectural Brass & Bronze</h3>
+        <p>Living materials that age gracefully over time. Brass brings a warm, luxurious glow to any space, while bronze offers deep, sculptural permanence. Perfect for high-end hardware, handrails, and accents.</p>
+      </div>
+
+      <div class="material-card">
+        <img class="color-swatch-img" src="/images/aluminum.jpg" alt="Aluminum" />
+        <h3>Aluminum</h3>
+        <p>Lightweight and inherently corrosion-resistant. Aluminum is our preferred substrate for exterior gates, outdoor furniture, and coastal environments where saltwater degradation is a concern.</p>
+      </div>
+    </div>
+
+    <hr class="divider" style="margin: var(--spacing-xxl) auto;" />
+
+    <!-- Finishes & Patinas -->
+    <h2 class="section-title">Finishes & Patinas</h2>
+    <div class="grid finish-grid">
+      <div class="finish-item">
+        <div class="finish-image" style="background-color: #1A1A1A;"></div>
+        <h4>Matte Black Powder Coat</h4>
+        <p>A baked-on, highly durable finish that resists scratching, chipping, and fading. Offers a clean, modern aesthetic with zero maintenance. Suitable for both indoor and outdoor use.</p>
+      </div>
+
+      <div class="finish-item">
+        <div class="finish-image" style="background: linear-gradient(45deg, #2a1610, #4d2b18);"></div>
+        <h4>Statuary Bronze Patina</h4>
+        <p>A chemical oxidation process applied to brass or bronze that artificially ages the metal, resulting in deep, rich brown tones with subtle variations. Waxed for interior protection.</p>
+      </div>
+
+      <div class="finish-item">
+        <div class="finish-image" style="background: repeating-linear-gradient(45deg, #B88B4A, #B88B4A 10px, #d4af37 10px, #d4af37 20px);"></div>
+        <h4>Satin Brushed Brass</h4>
+        <p>A physical finish where the metal is linearly abraded to create a soft, non-reflective sheen. Often sealed with a clear lacquer to prevent natural tarnishing, maintaining its bright luxury.</p>
+      </div>
+      
+      <div class="finish-item">
+        <div class="finish-image" style="background: radial-gradient(circle, #555 0%, #222 100%);"></div>
+        <h4>Blackened Steel</h4>
+        <p>A chemical treatment applied directly to raw steel that turns the surface a deep gunmetal-to-black color while allowing the natural grain and mill scale to show through. Sealed with penetrol or wax.</p>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: var(--spacing-xl);">
+      <p style="font-family: var(--font-heading); font-weight: 600; margin-bottom: var(--spacing-md);">Need physical samples for a client presentation?</p>
+      <a href="/contact" class="btn">Request a Sample Box</a>
+    </div>
+
+  </main>
+
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center;">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-brushed-brass);
+  }
+  
+  .material-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .material-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: var(--spacing-lg);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  .material-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-brushed-brass);
+  }
+  
+  .color-swatch-img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-md);
+    border: 1px solid rgba(0,0,0,0.1);
+    display: block;
+  }
+  
+  .finish-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .finish-item {
+    text-align: center;
+  }
+  
+  .finish-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md);
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  h3, h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    max-width: 200px;
+  }
+</style>

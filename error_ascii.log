@@ -1,0 +1,133 @@
+node.exe : [31m[1m12
+:40:57[22m 
+[ERROR][39m 
+TypeError: 
+entry.render is not a 
+function
+At line:1 char:1
++ & "C:\node-v24.14.0-
+win-x64/node.exe" "C:\
+node-v24.14.0-win-x64/
+node_ ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ([31m[1m1   
+ 2:40:... not a fu    
+nction:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+    at file:///D:/SEO%
+20Porfolio%20Projects/
+Urban%20Forge/dist/.pr
+erender/chunks/_slug__
+BnPM7rSJ.mjs:17:35
+    at [slug] (file://
+/D:/SEO%20Porfolio%20P
+rojects/Urban%20Forge/
+dist/.prerender/chunks
+/Header_C7TYQAz7.mjs:1
+9:12)
+    at callComponentAs
+TemplateResultOrRespon
+se (file:///D:/SEO%20P
+orfolio%20Projects/Urb
+an%20Forge/dist/.prere
+nder/chunks/prerender_
+Cpq8zya3.mjs:4058:31)
+    at renderToString 
+(file:///D:/SEO%20Porf
+olio%20Projects/Urban%
+20Forge/dist/.prerende
+r/chunks/prerender_Cpq
+8zya3.mjs:3976:32)
+    at renderPage (fil
+e:///D:/SEO%20Porfolio
+%20Projects/Urban%20Fo
+rge/dist/.prerender/ch
+unks/prerender_Cpq8zya
+3.mjs:5277:18)
+    at lastNext (file:
+///D:/SEO%20Porfolio%2
+0Projects/Urban%20Forg
+e/dist/.prerender/chun
+ks/prerender_Cpq8zya3.
+mjs:7962:31)
+    at async 
+callMiddleware (file:/
+//D:/SEO%20Porfolio%20
+Projects/Urban%20Forge
+/dist/.prerender/chunk
+s/prerender_Cpq8zya3.m
+js:5370:10)
+    at async 
+RenderContext.render (
+file:///D:/SEO%20Porfo
+lio%20Projects/Urban%2
+0Forge/dist/.prerender
+/chunks/prerender_Cpq8
+zya3.mjs:7996:73)
+    at async 
+BuildApp.render (file:
+///D:/SEO%20Porfolio%2
+0Projects/Urban%20Forg
+e/dist/.prerender/chun
+ks/prerender_Cpq8zya3.
+mjs:8901:20)
+    at async generateP
+athWithPrerenderer (fi
+le:///D:/SEO%20Porfoli
+o%20Projects/Urban%20F
+orge/node_modules/astr
+o/dist/core/build/gene
+rate.js:251:16)
+[31m[1m12:40:57[22m
+ [ERROR] [build][39m 
+Caught error 
+rendering /portfolio/m
+odern-spiral-staircase
+-soho: TypeError: 
+entry.render is not a 
+function
+entry.render is not a 
+function
+  [1mStack 
+trace:[22m
+[2m    at file:///D:/
+SEO%20Porfolio%20Proje
+cts/Urban%20Forge/dist
+/.prerender/chunks/_sl
+ug__BnPM7rSJ.mjs:17:35
+    at callComponentAs
+TemplateResultOrRespon
+se (file:///D:/SEO%20P
+orfolio%20Projects/Urb
+an%20Forge/dist/.prere
+nder/chunks/prerender_
+Cpq8zya3.mjs:4058:31)
+    at renderPage (fil
+e:///D:/SEO%20Porfolio
+%20Projects/Urban%20Fo
+rge/dist/.prerender/ch
+unks/prerender_Cpq8zya
+3.mjs:5277:18)
+    at async 
+callMiddleware (file:/
+//D:/SEO%20Porfolio%20
+Projects/Urban%20Forge
+/dist/.prerender/chunk
+s/prerender_Cpq8zya3.m
+js:5370:10)
+    at async 
+BuildApp.render (file:
+///D:/SEO%20Porfolio%2
+0Projects/Urban%20Forg
+e/dist/.prerender/chun
+ks/prerender_Cpq8zya3.
+mjs:8901:20)[22m
