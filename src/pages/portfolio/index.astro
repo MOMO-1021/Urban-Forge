@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 const portfolioEntries = await getCollection('portfolio');
 ---
 
-<Layout title="Our Work | Portfolio">
+<Layout title="Bespoke Metalwork & Luxury Portfolios" description="Explore our bespoke metalwork portfolio. From custom forged staircases to luxury fireplace screens, witness our uncompromising quality and heritage artisanship.">
   <Header />
 
   <section class="portfolio-hero">
@@ -14,7 +14,7 @@ const portfolioEntries = await getCollection('portfolio');
     <div class="container hero-content">
       <h1 class="elegant-title">Masterworks</h1>
       <div class="golden-divider"></div>
-      <p class="elegant-subtitle">A curated selection of our most challenging and beautiful residential & commercial commissions, forged to endure.</p>
+      <p class="elegant-subtitle">A curated selection of our bespoke metalwork and luxury commissions. Hand-forged heritage, uncompromising durability, and true artisanship.</p>
     </div>
   </section>
 
@@ -139,7 +139,7 @@ const portfolioEntries = await getCollection('portfolio');
   }
 
   .image-container {
-    height: 250px;
+    height: 350px;
     background-color: var(--color-charcoal);
     overflow: hidden;
     position: relative;
@@ -185,6 +185,27 @@ const portfolioEntries = await getCollection('portfolio');
     font-size: 0.9rem;
     color: #666;
     margin: 0;
+  }
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .portfolio-card {
+      border: none;
+      border-bottom: 1px solid #eaeaea;
+      border-radius: 0;
+    }
+    .image-container {
+      height: 400px; /* Big, immersive images on mobile */
+    }
+    main.container.section {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .filter-nav {
+      padding: 0 var(--spacing-md);
+    }
   }
 </style>
 
