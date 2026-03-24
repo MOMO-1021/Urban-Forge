@@ -1,0 +1,228 @@
+---
+---
+
+<form class="inquiry-form" action="/contact-success" method="POST" enctype="multipart/form-data">
+  <div class="form-grid">
+    <div class="form-group half-width">
+      <label for="firstName">First Name *</label>
+      <input type="text" id="firstName" name="firstName" required />
+    </div>
+    
+    <div class="form-group half-width">
+      <label for="lastName">Last Name *</label>
+      <input type="text" id="lastName" name="lastName" required />
+    </div>
+
+    <div class="form-group half-width">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group half-width">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+    </div>
+
+    <div class="form-group full-width">
+      <label for="role">My Role *</label>
+      <select id="role" name="role" required>
+        <option value="" disabled selected>Select your role...</option>
+        <option value="architect">Architect</option>
+        <option value="designer">Interior Designer</option>
+        <option value="builder">Builder / General Contractor</option>
+        <option value="homeowner">Luxury Homeowner</option>
+      </select>
+    </div>
+
+    <div class="form-group half-width">
+      <label for="projectType">Project Type *</label>
+      <select id="projectType" name="projectType" required>
+        <option value="" disabled selected>Select project type...</option>
+        <option value="staircase">Custom Forged Staircase</option>
+        <option value="hardware">Architectural Hardware</option>
+        <option value="fireplace">Luxury Fireplace Surround</option>
+        <option value="restoration">Historic Metalwork Restoration</option>
+        <option value="other">Other Bespoke Metalwork</option>
+      </select>
+    </div>
+
+    <div class="form-group half-width">
+      <label for="budget">Estimated Budget Range *</label>
+      <select id="budget" name="budget" required>
+        <option value="" disabled selected>Select a budget...</option>
+        <option value="5k-10k">$5k - $10k</option>
+        <option value="10k-25k">$10k - $25k</option>
+        <option value="25k-50k">$25k - $50k</option>
+        <option value="50k+">$50k+</option>
+      </select>
+      <small class="help-text">Our bespoke commissions begin at $5,000.</small>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="details">Project Details *</label>
+      <textarea id="details" name="details" rows="5" placeholder="Please describe the scope, timeline, and any specific materials or finish requirements..." required></textarea>
+    </div>
+
+    <div class="form-group full-width file-upload-group">
+      <label for="drawings" class="file-label">
+        <span class="btn btn-secondary btn-sm upload-btn">Upload Architectural Drawings</span>
+        <span class="file-name">No file chosen (PDF, DWG, DXF up to 10MB)</span>
+      </label>
+      <input type="file" id="drawings" name="drawings" accept=".pdf,.dwg,.dxf,.jpg,.png" class="visually-hidden" />
+    </div>
+    
+    <div class="form-submit full-width">
+      <button type="submit" class="btn">Submit Project Inquiry</button>
+    </div>
+  </div>
+</form>
+
+<style>
+  .inquiry-form {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-xl);
+    border-radius: 4px;
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md) var(--spacing-lg);
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .half-width {
+    grid-column: span 1;
+  }
+  .full-width {
+    grid-column: span 2;
+  }
+  
+  label {
+    font-family: var(--font-heading);
+    color: var(--color-off-white);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-charcoal);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--color-off-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-brushed-brass);
+    background-color: rgba(0,0,0,0.2);
+  }
+  
+  /* Force dark background on dropdown options natively so white text is readable */
+  select option {
+    background-color: #222222 !important;
+    color: #ffffff !important;
+  }
+  
+  select option:disabled {
+    background-color: #222222 !important;
+    color: #888888 !important;
+  }
+  
+  .help-text {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+  
+  .file-upload-group {
+    margin-top: var(--spacing-sm);
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .file-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  .file-name {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    text-transform: none;
+    font-family: var(--font-body);
+  }
+  
+  .form-submit {
+    margin-top: var(--spacing-md);
+    text-align: left;
+  }
+  
+  /* Make the upload secondary button pop against the dark container */
+  .upload-btn {
+    color: var(--color-off-white) !important;
+    border-color: var(--color-off-white) !important;
+    transition: all 0.3s ease;
+  }
+  .upload-btn:hover {
+    background-color: var(--color-off-white) !important;
+    color: var(--color-matte-black) !important;
+  }
+  
+  @media (max-width: 768px) {
+    .half-width {
+      grid-column: span 2;
+    }
+    .inquiry-form {
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+    .file-label {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Simple script to update file name display
+  document.addEventListener('DOMContentLoaded', () => {
+    const fileInput = document.getElementById('drawings') as HTMLInputElement;
+    const fileNameDisplay = document.querySelector('.file-name');
+    
+    if (fileInput && fileNameDisplay) {
+      fileInput.addEventListener('change', (e) => {
+        const target = e.target as HTMLInputElement;
+        if (target.files && target.files.length > 0) {
+          fileNameDisplay.textContent = target.files[0].name;
+        } else {
+          fileNameDisplay.textContent = 'No file chosen (PDF, DWG, DXF up to 10MB)';
+        }
+      });
+    }
+  });
+</script>

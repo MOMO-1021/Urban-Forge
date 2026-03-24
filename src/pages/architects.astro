@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Architects Vault & Technical Resources" description="Technical specifications, CAD files, and material tolerances for architects and designers working with The Urban Forge.">
+  <Header />
+
+  <section class="architects-hero pattern-bg">
+    <div class="container hero-content">
+      <h1>Architects Vault</h1>
+      <p>Technical resources, specifications, and CAD files for seamless integration of our bespoke metalwork into your visionary projects.</p>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: var(--color-charcoal); padding: var(--spacing-xl) 0;">
+    <div class="container">
+      <div class="resource-grid">
+        <div class="resource-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3>Material Specifications &amp; Tolerances</h3>
+          <p>Comprehensive cut-sheets detailing tensile strength, load-bearing capacities, and deflection criteria for our structural alloy profiles.</p>
+          <a href="#" class="download-link">Download Spec Sheets (PDF)</a>
+        </div>
+        
+        <div class="resource-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <h3>CAD &amp; Revit Libraries</h3>
+          <p>2D standard details and 3D models for immediate import into your drawings. Covers standard railing extrusions and baluster spacings.</p>
+          <a href="#" class="download-link">Download CAD / DWG Vault (.ZIP)</a>
+        </div>
+        
+        <div class="resource-card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.9 4.9 14.2 14.2"></path></svg>
+          </div>
+          <h3>Finish Palettes &amp; Patinas</h3>
+          <p>High-resolution swatches comparing powder coating vs. hand-applied living patinas such as blackened steel and oil-rubbed bronze.</p>
+          <a href="/materials" class="download-link text-link">View Materials Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section process-section" style="background-color: var(--color-matte-black); border-top: 1px solid rgba(255,255,255,0.1); text-align: center; padding: var(--spacing-xl) 0;">
+    <div class="container" style="max-width: 600px;">
+      <h2>Need Custom Structural Details?</h2>
+      <p style="margin-bottom: var(--spacing-md); color: rgba(255,255,255,0.7);">Our engineering team works directly with architects to solve complex load challenges while preserving aesthetic intent.</p>
+      <a href="/contact?role=architect" class="btn btn-secondary white-btn">Request Structural Consultation</a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .architects-hero {
+    padding: var(--spacing-xxl) 0 var(--spacing-xl);
+    background-color: var(--color-matte-black);
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .architects-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.05;
+    background-image: radial-gradient(var(--color-brushed-brass) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+  }
+  .hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--color-brushed-brass);
+    margin-bottom: var(--spacing-sm);
+  }
+  .hero-content p {
+    font-size: 1.25rem;
+    color: var(--color-off-white);
+    opacity: 0.9;
+    font-family: var(--font-body);
+  }
+  
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+  }
+  .resource-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .resource-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(184, 134, 11, 0.5); /* brass tint */
+  }
+  .card-icon {
+    color: var(--color-brushed-brass);
+    margin-bottom: var(--spacing-md);
+  }
+  .resource-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-off-white);
+    margin-bottom: var(--spacing-sm);
+  }
+  .resource-card p {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+    flex-grow: 1;
+  }
+  .download-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-brushed-brass);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    margin-top: auto;
+    text-decoration: none;
+  }
+  .download-link:hover {
+    color: var(--color-off-white);
+  }
+  
+  .white-btn {
+    color: var(--color-off-white) !important;
+    border-color: var(--color-off-white) !important;
+    transition: all 0.3s ease;
+  }
+  .white-btn:hover {
+    background-color: var(--color-off-white) !important;
+    color: var(--color-matte-black) !important;
+  }
+</style>
