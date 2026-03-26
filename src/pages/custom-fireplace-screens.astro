@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+// Adding structured data (Schema) for Product Category
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Custom Fireplace Screens",
+  "description": "High-end custom fireplace screens in Modern, Rustic, and Industrial styles. Hand-forged mesh and heat-resistant metals.",
+  "url": "https://theurbanforge.com/custom-fireplace-screens",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "The Urban Forge"
+  }
+};
+---
+
+<Layout title="Custom Fireplace Screens | The Urban Forge" description="Explore our gallery of custom fireplace screens. Hand-forged heavy-duty safety mesh, non-standard fitment, and heat-resistant finishes superior to big-box options.">
+  <Header />
+
+  <section class="page-header bg-dark">
+    <div class="container relative-z text-center">
+      <h1>Custom Fireplace Screens</h1>
+      <p class="subtitle">Bespoke artistry for the hearth. Precision fitment and heavy-duty materials you can't find in a big-box store.</p>
+      
+      <div class="service-nav">
+        <a href="#modern" class="btn btn-secondary white-btn">Modern</a>
+        <a href="#rustic" class="btn btn-secondary white-btn">Rustic</a>
+        <a href="#industrial" class="btn btn-secondary white-btn">Industrial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section class="container value-prop-section">
+    <div class="text-center" style="max-width: 800px; margin: 0 auto; padding-bottom: var(--spacing-md);">
+      <h2>Why Go Custom?</h2>
+      <p>A mass-produced fireplace screen is a compromise. At The Urban Forge, we engineer hand-forged screens tailored exactly to your hearth's dimensions, incorporating high-quality heat-resistant finishes and heavy-duty safety mesh that will outlast any off-the-shelf alternative.</p>
+    </div>
+    
+    <div class="value-grid">
+      <div class="value-card">
+        <h3>Perfect Fitment</h3>
+        <p>Arched, oversized, or non-standard openings handled with zero gaps and flawless tolerance.</p>
+      </div>
+      <div class="value-card">
+        <h3>Heavy-Duty Mesh</h3>
+        <p>We weave and weld superior gauge mesh that offers real spark protection without bowing or warping.</p>
+      </div>
+      <div class="value-card">
+        <h3>Artisan Finishes</h3>
+        <p>Specialized blacksmithing patinas and high-heat powder coats that maintain their depth for generations.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="lookbook">
+    <!-- Modern Style -->
+    <section id="modern" class="lookbook-section container">
+      <div class="lookbook-content">
+        <h2>Modern Minimalist</h2>
+        <p>Clean lines, brushed finishes, and concealed hardware. Our modern fireplace screens are designed to complement contemporary architecture, allowing the fire itself to be the focal point while maintaining a subtle, elegant profile.</p>
+        <a href="/contact?project=modern-screen" class="btn">Inquire About This Style</a>
+      </div>
+      <div class="lookbook-image">
+        <!-- Replaced with an actual image or placeholder -->
+        <div class="placeholder-img">
+           <p>Modern Fireplace Screen Gallery</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rustic Style -->
+    <section id="rustic" class="lookbook-section container reverse">
+      <div class="lookbook-content">
+        <h2>Rustic & Hand-Hammered</h2>
+        <p>The essence of traditional blacksmithing. Showcasing visible hammer marks, iron scrollwork, and rich, darkened patinas. Perfect for timber-frame homes, lodges, and deep stone hearths.</p>
+        <a href="/contact?project=rustic-screen" class="btn">Inquire About This Style</a>
+      </div>
+      <div class="lookbook-image">
+        <div class="placeholder-img">
+           <p>Rustic Fireplace Screen Gallery</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industrial Style -->
+    <section id="industrial" class="lookbook-section container">
+      <div class="lookbook-content">
+        <h2>Industrial Statement</h2>
+        <p>Bold, raw, and structural. Featuring exposed rivet details, heavy plate steel, and geometric forms. This style anchors large spaces and pairs phenomenally well with exposed brick and concrete interiors.</p>
+        <a href="/contact?project=industrial-screen" class="btn">Inquire About This Style</a>
+      </div>
+      <div class="lookbook-image">
+        <div class="placeholder-img">
+           <p>Industrial Fireplace Screen Gallery</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta-banner" style="background-color: var(--color-charcoal); text-align: center; padding: var(--spacing-xl) 0;">
+    <div class="container">
+      <h2 style="color: var(--color-brushed-brass);">Ready to elevate your hearth?</h2>
+      <p style="color: var(--color-off-white); max-width: 600px; margin: 0 auto var(--spacing-lg);">Send us a photo of your fireplace and its dimensions, and our artisans will begin drafting a custom quoting package.</p>
+      <a href="/contact" class="btn">Get a Custom Quote</a>
+    </div>
+  </section>
+
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center;">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-xxl) 0;
+    position: relative;
+    border-bottom: 2px solid var(--color-brushed-brass);
+  }
+  .relative-z {
+    position: relative;
+    z-index: 2;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .page-header h1 {
+    color: var(--color-brushed-brass);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    margin-bottom: var(--spacing-sm);
+  }
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--color-off-white);
+    max-width: 700px;
+    margin: 0 auto var(--spacing-lg);
+  }
+  .service-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+  }
+  .white-btn {
+    color: var(--color-off-white);
+    border-color: rgba(255,255,255,0.3);
+  }
+  .white-btn:hover {
+    background-color: var(--color-off-white);
+    color: var(--color-matte-black);
+    border-color: var(--color-off-white);
+  }
+  
+  .value-prop-section {
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  .value-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+  }
+  .value-card {
+    background: #f9f9f9;
+    padding: var(--spacing-lg);
+    border-top: 3px solid var(--color-brushed-brass);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  .value-card h3 {
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    color: var(--color-matte-black);
+  }
+  .value-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .lookbook-section {
+    padding: var(--spacing-xl) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  .lookbook-section.reverse {
+    direction: rtl; 
+  }
+  .lookbook-section.reverse > * {
+    direction: ltr; 
+  }
+  
+  .lookbook-content h2 {
+    color: var(--color-matte-black);
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+  }
+  .lookbook-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-brushed-brass);
+  }
+  .lookbook-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  .placeholder-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-brushed-brass);
+    color: #777;
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .lookbook-section {
+      grid-template-columns: 1fr;
+    }
+    .lookbook-section.reverse {
+      direction: ltr;
+    }
+  }
+</style>

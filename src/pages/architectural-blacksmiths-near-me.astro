@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+// Structured data for local business
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "The Urban Forge",
+  "image": "https://theurbanforge.com/images/forge-hammer.jpg",
+  "description": "Master architectural blacksmiths creating high-end, hand-forged custom metalwork.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Industrial Way, Suite A",
+    "addressLocality": "Seattle",
+    "addressRegion": "WA",
+    "postalCode": "98101",
+    "addressCountry": "US"
+  },
+  "url": "https://theurbanforge.com/architectural-blacksmiths-near-me",
+  "telephone": "+1-555-0123"
+};
+---
+
+<Layout title="Architectural Blacksmiths Near Me | The Urban Forge" description="Looking for master architectural blacksmiths? The Urban Forge crafts prestige, hand-forged metalwork. Step inside our local forge to see true artisanship.">
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="forge-hero">
+    <div class="hero-content container relative-z text-center">
+      <h1>Master Architectural Blacksmiths</h1>
+      <p class="subtitle">Hand-forged prestige. True artisan metalwork requires heat, an anvil, and uncompromising skill.</p>
+      <a href="#visit-forge" class="btn">Visit Our Local Forge</a>
+    </div>
+    <!-- In real life, this would be a looping video of the forge -->
+    <div class="hero-bg-overlay"></div>
+  </section>
+
+  <!-- The Craft Section -->
+  <section class="section container">
+    <div class="craft-grid">
+      <div class="craft-text">
+        <h2>The Art of the Anvil</h2>
+        <p>A true architectural blacksmith does not rely on mass-produced extrusions and robotic welders. True prestige is born from raw steel, a 2000-degree forge, and the precise strike of a hammer.</p>
+        <p>At The Urban Forge, we preserve the ancient art of blacksmithing while applying it to modern architectural demands. Our clients command the highest level of craftsmanship—finishes that breathe, connections that are hammered rather than bolted, and organic textures that cannot be replicated in a factory.</p>
+        
+        <div class="craft-features">
+          <div class="feature-item">
+            <h3>Custom Forging</h3>
+            <p>Every baluster, scroll, and structural joint is shaped by hand.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Living Patinas</h3>
+            <p>We utilize traditional heat-bluing, oil-rubbing, and acid patinas to create depth.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video Social Proof -->
+      <div class="craft-video">
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/VH5gkQGTNfw?autoplay=0&controls=1&mute=0" 
+            title="Blacksmithing Process" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="caption">Watch our master artisan hand-forge a custom stair railing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit the Forge / GBP Callout -->
+  <section id="visit-forge" class="visit-section bg-dark">
+    <div class="container visit-grid">
+      <div class="visit-image">
+        <div class="img-box">Image of the Workshop / Forge Glowing</div>
+      </div>
+      <div class="visit-text">
+        <h2 style="color: var(--color-brushed-brass);">Experience the Heat</h2>
+        <p>Seeing is believing. We invite architects, designers, and future clients to visit our active workshop. Hear the ring of the anvil, feel the heat of the forge, and witness exactly how your custom project will be brought to life.</p>
+        
+        <div class="forge-location">
+          <h3>The Urban Forge Workshop</h3>
+          <p>123 Industrial Way, Suite A<br/>Metalworks District, Seattle, WA</p>
+          <p><em>Tours by appointment. Please wear closed-toe shoes.</em></p>
+        </div>
+        
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary white-btn" style="margin-top: 1rem;">
+          Get Directions on Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Layout>
+
+<style>
+  .forge-hero {
+    position: relative;
+    padding: var(--spacing-xxl) 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-matte-black);
+    /* In a real site, add a background image of glowing metal or forge */
+    background-image: radial-gradient(circle at center, rgba(160,50,0,0.3) 0%, rgba(26,26,26,1) 80%);
+  }
+  .hero-bg-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('/images/texture-overlay.png') repeat;
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .relative-z {
+    position: relative;
+    z-index: 2;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .forge-hero h1 {
+    color: var(--color-off-white);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    color: #e0e0e0;
+    max-width: 650px;
+    margin: 0 auto var(--spacing-lg);
+    line-height: 1.6;
+  }
+  
+  .craft-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  .craft-text h2 {
+    color: var(--color-matte-black);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+  }
+  .craft-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  .craft-features {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .feature-item h3 {
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    color: var(--color-charcoal);
+    border-left: 3px solid var(--color-brushed-brass);
+    padding-left: 1rem;
+  }
+  .feature-item p {
+    margin-bottom: 0;
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border: 2px solid var(--color-brushed-brass);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .caption {
+    font-size: 0.95rem;
+    text-align: center;
+    color: #666;
+    margin-top: 1rem;
+    font-style: italic;
+  }
+
+  .visit-section {
+    padding: var(--spacing-xxl) 0;
+  }
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xxl);
+    align-items: center;
+  }
+  .visit-text {
+    color: var(--color-off-white);
+  }
+  .visit-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.8);
+  }
+  .forge-location {
+    background: rgba(255,255,255,0.05);
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--color-brushed-brass);
+    margin-bottom: var(--spacing-lg);
+  }
+  .forge-location h3 {
+    color: var(--color-brushed-brass);
+    margin-bottom: 0.5rem;
+  }
+  .forge-location p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .white-btn {
+    color: var(--color-off-white);
+    border-color: rgba(255,255,255,0.3);
+  }
+  .white-btn:hover {
+    background-color: var(--color-off-white);
+    color: var(--color-matte-black);
+    border-color: var(--color-off-white);
+  }
+  
+  .img-box {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-family: var(--font-heading);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .craft-grid, .visit-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
