@@ -18,7 +18,7 @@ const portfolioEntries = await getCollection('portfolio');
     </div>
   </section>
 
-  <main class="container section">
+  <main class="section portfolio-main">
     
     <!-- Filter Navigation (Visual Only for now) -->
     <div class="filter-nav">
@@ -101,6 +101,12 @@ const portfolioEntries = await getCollection('portfolio');
     font-weight: 300;
     line-height: 1.8;
     letter-spacing: 0.5px;
+  }
+
+  .portfolio-main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) 5%;
   }
 
   .filter-nav {

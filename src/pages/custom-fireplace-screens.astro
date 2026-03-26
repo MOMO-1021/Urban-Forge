@@ -160,10 +160,16 @@ const schemaData = {
     border-bottom: 1px solid rgba(0,0,0,0.1);
   }
   .value-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) !important;
     gap: var(--spacing-lg);
     margin-top: var(--spacing-md);
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    .value-grid {
+      grid-template-columns: 1fr !important;
+    }
   }
   .value-card {
     background: #f9f9f9;
