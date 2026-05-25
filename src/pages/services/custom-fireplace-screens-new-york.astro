@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout title="Custom Fireplace Screens New York | Urban Forge">
+  <Header />
+  <main class="container service-detail">
+    <div class="breadcrumb">
+      <a href="/services">Services</a> &gt; <span>Fireplace Screens</span>
+    </div>
+    <h1>Custom Fireplace Screens in New York</h1>
+    <!-- Fallback image as limit was reached -->
+    <img src="/images/custom_railings.png" alt="Custom Fireplace Screens" class="hero-image" />
+    <div class="content-body">
+      <h2>Modern and Traditional Surrounds</h2>
+      <p>Transform your NYC apartment or townhome with a custom fireplace screen. We work with materials that withstand intense heat while providing a stunning visual centerpiece.</p>
+      <h3>Materials & Finishes</h3>
+      <p>From hot-rolled steel paneling to intricately woven mesh, our finishes are designed to complement both traditional mantels and modern minimalist surrounds.</p>
+    </div>
+  </main>
+</Layout>
+<style>
+  .service-detail { padding: var(--spacing-xl) 0; max-width: 800px; }
+  .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: var(--spacing-md); }
+  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-lg); color: var(--color-matte-black); }
+  .hero-image { width: 100%; border: 2px solid var(--color-brushed-brass); margin-bottom: var(--spacing-xl); }
+  .content-body h2, .content-body h3 { color: var(--color-matte-black); margin-top: var(--spacing-lg); }
+  .content-body p { font-size: 1.1rem; line-height: 1.6; color: #444; }
+</style>

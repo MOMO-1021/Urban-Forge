@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Blacksmith",
+  "name": "Urban Forge",
+  "description": "Master architectural blacksmiths serving New York City.",
+  "areaServed": ["Manhattan", "Brooklyn", "Queens", "Staten Island", "Bronx", "Westchester", "Long Island"]
+};
+---
+
+<Layout title="Architectural Blacksmiths Near Me | New York | Urban Forge">
+  <Header />
+  
+  <main class="container service-detail">
+    <div class="breadcrumb">
+      <a href="/services">Services</a> &gt; <span>Architectural Blacksmiths</span>
+    </div>
+    
+    <h1>Architectural Blacksmiths Near Me in New York</h1>
+    
+    <img src="/images/architectural_blacksmiths.png" alt="Architectural Blacksmith NYC" class="hero-image" />
+    
+    <div class="content-body">
+      <h2>Defining Architectural Blacksmithing in NYC</h2>
+      <p>As premier <strong>architectural blacksmiths</strong>, we bridge the gap between historic metalworking techniques and modern engineering. From restoring historic ironwork in Brooklyn Heights to creating striking modern staircases in Manhattan lofts, our custom collaboration process ensures your vision becomes a forged reality.</p>
+      
+      <h3>Our Service Areas</h3>
+      <p>We proudly serve the five boroughs of New York City and the surrounding areas:</p>
+      <ul class="area-list">
+        <li>Manhattan & Brooklyn</li>
+        <li>Queens & The Bronx</li>
+        <li>Staten Island</li>
+        <li>Westchester County & Long Island</li>
+      </ul>
+
+      <h3>Client Testimonials</h3>
+      <blockquote class="testimonial">
+        "Urban Forge designed a custom wrought iron gate for our brownstone that perfectly matched the historic neighborhood. True artisans!"<br>
+        <strong>- Sarah T., Brooklyn, NY</strong>
+      </blockquote>
+
+      <div class="map-container">
+        <h3>Visit Our Metalworks</h3>
+        <p>123 Broadway, New York, NY 10001</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x89c259af18ac2511%3A0x600647cbf2da1823!2sBroadway%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      
+      <div class="cta-box">
+        <h3>Looking for a Metal Fabricator?</h3>
+        <a href="/contact" class="btn btn-secondary">Contact Our Team</a>
+      </div>
+    </div>
+  </main>
+  
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Layout>
+
+<style>
+  .service-detail {
+    padding: var(--spacing-xl) 0;
+    max-width: 800px;
+  }
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: var(--spacing-md);
+  }
+  .breadcrumb a {
+    color: var(--color-brushed-brass);
+  }
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-matte-black);
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xl);
+    border: 2px solid var(--color-brushed-brass);
+  }
+  .content-body h2, .content-body h3 {
+    color: var(--color-matte-black);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-body p, .content-body ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: var(--spacing-md);
+  }
+  .testimonial {
+    font-style: italic;
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-brushed-brass);
+    margin: 2rem 0;
+  }
+  .map-container {
+    margin: 3rem 0;
+  }
+  .cta-box {
+    background: var(--color-matte-black);
+    color: var(--color-off-white);
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-xxl);
+    text-align: center;
+    border-radius: 4px;
+  }
+  .cta-box h3 {
+    color: var(--color-brushed-brass);
+    margin-top: 0;
+  }
+  .area-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+</style>

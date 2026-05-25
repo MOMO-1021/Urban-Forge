@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout title="Our Services">
+  <Header />
+  
+  <section class="page-header bg-dark">
+    <div class="container relative-z text-center">
+      <h1>Custom Metal Fabrication Services</h1>
+      <p class="subtitle">Master-crafted architectural metalwork tailored to your specific needs.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="services-grid">
+      <a href="/services/custom-metal-railings-new-york" class="service-card">
+        <div class="card-image" style="background-image: url('/images/custom_railings.png')"></div>
+        <div class="card-content">
+          <h2>Custom Metal Railings</h2>
+          <p>Interior and exterior railings crafted to precision.</p>
+        </div>
+      </a>
+      
+      <a href="/services/architectural-blacksmiths-new-york" class="service-card">
+        <div class="card-image" style="background-image: url('/images/architectural_blacksmiths.png')"></div>
+        <div class="card-content">
+          <h2>Architectural Blacksmiths</h2>
+          <p>Traditional forging meets modern architecture.</p>
+        </div>
+      </a>
+      
+      <a href="/services/wrought-iron-gates" class="service-card">
+        <div class="card-image" style="background-image: url('/images/wrought_iron_gates.png')"></div>
+        <div class="card-content">
+          <h2>Wrought Iron Gates</h2>
+          <p>Monumental driveway and pedestrian gates.</p>
+        </div>
+      </a>
+      
+      <a href="/services/steel-staircase-fabricator" class="service-card">
+        <div class="card-image" style="background-image: url('/images/steel_staircase.png')"></div>
+        <div class="card-content">
+          <h2>Steel Staircases</h2>
+          <p>Floating, spiral, and industrial steel staircases.</p>
+        </div>
+      </a>
+      
+      <a href="/services/custom-brass-door-hardware" class="service-card">
+        <div class="card-image" style="background-image: url('/images/custom_brass_hardware.png')"></div>
+        <div class="card-content">
+          <h2>Custom Brass Hardware</h2>
+          <p>Bespoke knobs, levers, and handles for luxury interiors.</p>
+        </div>
+      </a>
+      
+      <a href="/services/minimalist-steel-furniture" class="service-card">
+        <div class="card-image" style="background-image: url('/images/minimalist_steel_furniture.png')"></div>
+        <div class="card-content">
+          <h2>Minimalist Steel Furniture</h2>
+          <p>Custom commission tables, desks, and shelving.</p>
+        </div>
+      </a>
+    </div>
+  </main>
+  
+  <footer class="bg-dark text-center" style="padding: var(--spacing-lg) 0;">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} Urban Forge. All rights reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-xxl) 0;
+    position: relative;
+    border-bottom: 2px solid var(--color-brushed-brass);
+    margin-bottom: var(--spacing-xl);
+  }
+  .page-header h1 {
+    color: var(--color-brushed-brass);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: var(--spacing-sm);
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-off-white);
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xxl);
+  }
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: var(--color-matte-black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  .card-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--color-brushed-brass);
+  }
+  .card-content {
+    padding: var(--spacing-md);
+  }
+  .card-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-matte-black);
+  }
+  .card-content p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #555;
+  }
+</style>

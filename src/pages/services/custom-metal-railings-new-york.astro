@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Custom Metal Railings",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Urban Forge"
+  },
+  "areaServed": "New York City",
+  "description": "Custom metal railings, cable railings, and wrought iron railings in New York. Code-compliant and expertly designed."
+};
+---
+
+<Layout title="Custom Metal Railings New York | Urban Forge">
+  <Header />
+  
+  <main class="container service-detail">
+    <div class="breadcrumb">
+      <a href="/services">Services</a> &gt; <span>Custom Metal Railings</span>
+    </div>
+    
+    <h1>Custom Metal Railings in New York</h1>
+    
+    <img src="/images/custom_railings.png" alt="Custom Metal Railings New York" class="hero-image" />
+    
+    <div class="content-body">
+      <h2>Expert Metal Railing Fabrication</h2>
+      <p>Whether you need sleek <strong>stainless steel cable railings</strong> for a modern deck or traditional <strong>wrought iron railings</strong> for an historic NYC townhouse, Urban Forge delivers uncompromising quality. We handle the entire design process, ensuring all railings meet strict New York building codes without sacrificing aesthetics.</p>
+      
+      <h3>Our Railing Types</h3>
+      <ul>
+        <li><strong>Cable Railing Systems:</strong> Marine-grade tensioned cables perfect for unobstructed views.</li>
+        <li><strong>Wrought Iron:</strong> Hand-forged detailing for timeless elegance.</li>
+        <li><strong>Stainless Steel & Glass:</strong> Minimalist profiles for modern interiors.</li>
+      </ul>
+      
+      <h3>NYC Code Compliance</h3>
+      <p>Navigating building codes in the five boroughs requires experience. We engineer all handrails and guardrails to meet or exceed load requirements and specific structural standards.</p>
+      
+      <div class="cta-box">
+        <h3>Ready to start your project?</h3>
+        <p>Contact our design team to discuss materials and finishes.</p>
+        <a href="/contact" class="btn btn-secondary">Request a Quote</a>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Service Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</Layout>
+
+<style>
+  .service-detail {
+    padding: var(--spacing-xl) 0;
+    max-width: 800px;
+  }
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: var(--spacing-md);
+  }
+  .breadcrumb a {
+    color: var(--color-brushed-brass);
+  }
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-matte-black);
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xl);
+    border: 2px solid var(--color-brushed-brass);
+  }
+  .content-body h2, .content-body h3 {
+    color: var(--color-matte-black);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-body p, .content-body ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: var(--spacing-md);
+  }
+  .content-body ul {
+    padding-left: 20px;
+  }
+  .cta-box {
+    background: var(--color-matte-black);
+    color: var(--color-off-white);
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-xxl);
+    text-align: center;
+    border-radius: 4px;
+  }
+  .cta-box h3 {
+    color: var(--color-brushed-brass);
+    margin-top: 0;
+  }
+</style>

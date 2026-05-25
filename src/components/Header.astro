@@ -7,10 +7,21 @@
     </div>
     <nav class="main-nav">
       <ul>
-        <li><a href="/services">Services</a></li>
+        <li><a href="/">Home</a></li>
+        <li class="dropdown">
+          <a href="/services" class="dropdown-toggle">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="/services/custom-metal-railings-new-york">Railings</a></li>
+            <li><a href="/services/steel-staircase-fabricator">Staircases</a></li>
+            <li><a href="/services/wrought-iron-gates">Gates</a></li>
+            <li><a href="/services/custom-fireplace-screens-new-york">Fireplace Screens</a></li>
+            <li><a href="/services/custom-brass-door-hardware">Door Hardware</a></li>
+            <li><a href="/services/minimalist-steel-furniture">Furniture</a></li>
+          </ul>
+        </li>
         <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/materials">Materials</a></li>
-        <li><a href="/architects">For Architects</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
         <li><a href="/contact" class="btn btn-secondary btn-sm">Contact</a></li>
       </ul>
     </nav>
@@ -57,6 +68,40 @@
   }
   .main-nav a:hover {
     color: var(--color-brushed-brass);
+  }
+  
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-matte-black);
+    border: 1px solid rgba(255,255,255,0.1);
+    min-width: 220px;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  .dropdown-menu li {
+    width: 100%;
+  }
+  .dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+    text-transform: none;
+    font-weight: 400;
+  }
+  .dropdown-menu a:hover {
+    background-color: rgba(255,255,255,0.05);
   }
   
   /* Make secondary button white until hover */

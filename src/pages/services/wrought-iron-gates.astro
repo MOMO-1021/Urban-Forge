@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout title="Wrought Iron Gates New York | Urban Forge">
+  <Header />
+  <main class="container service-detail">
+    <div class="breadcrumb">
+      <a href="/services">Services</a> &gt; <span>Wrought Iron Gates</span>
+    </div>
+    <h1>Custom Wrought Iron Gates in New York</h1>
+    <img src="/images/wrought_iron_gates.png" alt="Wrought Iron Gates" class="hero-image" />
+    <div class="content-body">
+      <h2>Driveway, Garden, and Security Gates</h2>
+      <p>A gate is the first impression of your property. We specialize in designing and fabricating monumental wrought iron gates for driveways, gardens, and secure entrances across New York.</p>
+      <h3>Automation & Security</h3>
+      <p>Modern gates require modern solutions. We integrate our traditional ironwork seamlessly with contemporary automation options and access control systems.</p>
+      <h3>Landmark Rules & Compliance</h3>
+      <p>Working in NYC means adhering to strict landmark regulations. We have the expertise to design gates that respect historic contexts while providing modern durability.</p>
+    </div>
+  </main>
+</Layout>
+<style>
+  .service-detail { padding: var(--spacing-xl) 0; max-width: 800px; }
+  .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: var(--spacing-md); }
+  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-lg); color: var(--color-matte-black); }
+  .hero-image { width: 100%; border: 2px solid var(--color-brushed-brass); margin-bottom: var(--spacing-xl); }
+  .content-body h2, .content-body h3 { color: var(--color-matte-black); margin-top: var(--spacing-lg); }
+  .content-body p { font-size: 1.1rem; line-height: 1.6; color: #444; }
+</style>

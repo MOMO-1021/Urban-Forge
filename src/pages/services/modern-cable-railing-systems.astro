@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+---
+
+<Layout title="Modern Cable Railing Systems for Decks | Urban Forge">
+  <Header />
+  <main class="container service-detail">
+    <div class="breadcrumb">
+      <a href="/services">Services</a> &gt; <a href="/services/custom-metal-railings-new-york">Metal Railings</a> &gt; <span>Cable Railings</span>
+    </div>
+    <h1>Modern Cable Railing Systems for Decks</h1>
+    <!-- Fallback image -->
+    <img src="/images/custom_railings.png" alt="Modern Cable Railing Systems" class="hero-image" />
+    <div class="content-body">
+      <h2>Marine-Grade Stainless Steel</h2>
+      <p>Our modern cable railing systems provide safety without obstructing your view. Perfect for coastal decks and modern interiors.</p>
+      <h3>Tensioning Systems & Integration</h3>
+      <p>We use top-of-the-line tensioning hardware that integrates seamlessly into wood, steel, or aluminum posts. We ensure all infill gaps meet strict building code requirements for handrails.</p>
+    </div>
+  </main>
+</Layout>
+<style>
+  .service-detail { padding: var(--spacing-xl) 0; max-width: 800px; }
+  .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: var(--spacing-md); }
+  .breadcrumb a { color: var(--color-brushed-brass); }
+  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-lg); color: var(--color-matte-black); }
+  .hero-image { width: 100%; border: 2px solid var(--color-brushed-brass); margin-bottom: var(--spacing-xl); }
+  .content-body h2, .content-body h3 { color: var(--color-matte-black); margin-top: var(--spacing-lg); }
+  .content-body p { font-size: 1.1rem; line-height: 1.6; color: #444; }
+</style>

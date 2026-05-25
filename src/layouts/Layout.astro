@@ -17,7 +17,8 @@ const { title, description = "The Urban Forge - Custom Metalwork for the Discern
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title} | The Urban Forge</title>
+		<title>{title} | Urban Forge</title>
+		<link rel="canonical" href={new URL(Astro.url.pathname, 'https://theurbanforge.com')} />
 		
 		<!-- Google Search Console -->
 		<meta name="google-site-verification" content="GSC-VERIFICATION-CODE-HERE" />
@@ -40,20 +41,21 @@ const { title, description = "The Urban Forge - Custom Metalwork for the Discern
 		<!-- Local Business Schema -->
 		<script type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
-			"@type": "LocalBusiness",
-			"name": "The Urban Forge",
+			"@type": "HomeAndConstructionBusiness",
+			"name": "Urban Forge",
 			"image": "https://theurbanforge.com/logo.jpg",
 			"@id": "https://theurbanforge.com",
 			"url": "https://theurbanforge.com",
-			"telephone": "+1234567890",
+			"telephone": "+1 (555) 123-4567",
 			"address": {
 				"@type": "PostalAddress",
-				"streetAddress": "123 Industrial Way, Suite A",
-				"addressLocality": "Metalworks District",
-				"addressRegion": "CA",
-				"postalCode": "12345",
+				"streetAddress": "123 Broadway",
+				"addressLocality": "New York",
+				"addressRegion": "NY",
+				"postalCode": "10001",
 				"addressCountry": "US"
 			},
+			"areaServed": ["New York", "NYC", "Brooklyn", "Manhattan", "Queens", "Staten Island", "Bronx", "Westchester", "Long Island"],
 			"priceRange": "$$$$"
 		})} />
 	</head>

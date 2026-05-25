@@ -16,6 +16,19 @@ const portfolioCollection = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.string(),
+    author: z.string(),
+    category: z.string(),
+    featuredImage: z.string(),
+  }),
+});
+
 export const collections = {
   'portfolio': portfolioCollection,
+  'blog': blogCollection,
 };
