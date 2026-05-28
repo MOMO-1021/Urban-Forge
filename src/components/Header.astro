@@ -52,7 +52,7 @@
   .logo a:hover {
     color: var(--color-brushed-brass);
   }
-  .main-nav ul {
+  .main-nav > ul {
     list-style: none;
     display: flex;
     gap: var(--spacing-lg);
@@ -75,20 +75,33 @@
     position: relative;
   }
   .dropdown-menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: var(--color-matte-black);
     border: 1px solid rgba(255,255,255,0.1);
     min-width: 220px;
+    display: flex;
     flex-direction: column;
     gap: 0;
     padding: 0.5rem 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    
+    /* Smooth Transition Setup */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                visibility 0.3s;
   }
-  .dropdown:hover .dropdown-menu {
-    display: flex;
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
   }
   .dropdown-menu li {
     width: 100%;
@@ -99,6 +112,7 @@
     font-size: 0.85rem;
     text-transform: none;
     font-weight: 400;
+    transition: background-color 0.25s ease, color 0.25s ease;
   }
   .dropdown-menu a:hover {
     background-color: rgba(255,255,255,0.05);
