@@ -88,22 +88,46 @@ import Header from '../../components/Header.astro';
   }
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xxl);
+    margin: 0 auto var(--spacing-xxl) auto;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
   }
+  
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 800px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      max-width: 450px;
+    }
+  }
+  
   .service-card {
     display: flex;
     flex-direction: column;
     background: #f9f9f9;
     border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
     text-decoration: none;
     color: var(--color-matte-black);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                border-color 0.3s ease;
+    height: 100%;
   }
   .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    border-color: var(--color-brushed-brass);
   }
   .card-image {
     height: 250px;
@@ -113,6 +137,9 @@ import Header from '../../components/Header.astro';
   }
   .card-content {
     padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
   .card-content h2 {
     font-size: 1.25rem;

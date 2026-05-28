@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="About Our Artisans" description="Learn about the heritage, master blacksmithing craftsmanship, and engineering standards behind The Urban Forge.">
+  <Header />
+  
+  <section class="page-header bg-dark">
+    <div class="container relative-z text-center">
+      <h1>Artisans of the Anvil & Modern Steel</h1>
+      <p class="subtitle">The heritage, craftsmanship, and precision behind The Urban Forge.</p>
+    </div>
+  </section>
+
+  <main class="container section">
+    <div class="story-section">
+      <div class="story-content">
+        <h2>Our Heritage</h2>
+        <p class="lead">With a 20-year local reputation, we have evolved from traditional welders into true artisans. Our work is not mass-produced; each piece—from grand spiral staircases to intricate fireplace screens—is a unique expression of durability and design.</p>
+        <p>At The Urban Forge, we believe that metal is not a cold, rigid medium, but a canvas for texture, form, and legacy. Every hammer blow on our anvils leaves an authentic mark that tells a story of human dedication—a tactile character that a CNC machine simply cannot replicate.</p>
+        <p>We partner with high-end architects, structural engineers, and interior designers to seamlessly integrate bespoke metalwork into luxury homes and commercial spaces throughout the region.</p>
+      </div>
+      <div class="story-image-box">
+        <div class="image-overlay-border"></div>
+        <img src="/images/architectural_blacksmiths.png" alt="Blacksmith at the anvil" class="about-hero-img" />
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">Years of Craftsmanship</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Bespoke Commissions</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Architectural Installations</span>
+      </div>
+    </div>
+
+    <h2 class="section-title">Our Guiding Principles</h2>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <div class="card-num">01</div>
+        <h3>Traditional Artistry</h3>
+        <p>We keep the centuries-old heritage of architectural blacksmithing alive. By combining coal forge techniques with modern metallurgy, we craft one-of-a-kind profiles that stand the test of time.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="card-num">02</div>
+        <h3>Engineering Rigor</h3>
+        <p>Bespoke aesthetics are nothing without safety. We design and construct all handrails, guardrails, and floating staircases to strictly meet or exceed local building codes and load requirements.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="card-num">03</div>
+        <h3>Uncompromising Finish</h3>
+        <p>Our hand-rubbed patinas, statuary bronze processes, and protective matte coatings ensure that every piece retains its deep, rich tonal character for generations, even in coastal environments.</p>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <h3>Let's Forge Your Legacy Piece</h3>
+      <p>Whether you have fully realized architectural CAD files or a simple hand sketch, we are ready to collaborate.</p>
+      <a href="/contact" class="btn">Start Your Commission</a>
+    </div>
+  </main>
+
+  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center;">
+     <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
+  </footer>
+</Layout>
+
+<style>
+  .page-header {
+    padding: var(--spacing-xxl) 0;
+    position: relative;
+    border-bottom: 2px solid var(--color-brushed-brass);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+  }
+  .page-header h1 {
+    color: var(--color-brushed-brass);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-off-white);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  .story-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    margin-bottom: var(--spacing-xxl);
+  }
+  .story-content h2 {
+    color: var(--color-matte-black);
+    font-size: 2.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-charcoal);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+  }
+  .story-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: var(--spacing-md);
+  }
+  .story-image-box {
+    position: relative;
+    padding: 10px;
+  }
+  .image-overlay-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: 2px solid var(--color-brushed-brass);
+    transform: translate(15px, 15px);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 4px;
+  }
+  .about-hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    background: var(--color-matte-black);
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xxl);
+    text-align: center;
+    border: 1px solid rgba(184, 139, 74, 0.2);
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--color-brushed-brass);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.95rem;
+    color: var(--color-off-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    padding-bottom: 1rem;
+    font-size: 2.25rem;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-brushed-brass);
+  }
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xxl);
+  }
+  .principle-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .principle-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-brushed-brass);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+  }
+  .card-num {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(184, 139, 74, 0.1);
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    line-height: 1;
+  }
+  .principle-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--color-matte-black);
+    position: relative;
+    z-index: 2;
+  }
+  .principle-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    position: relative;
+    z-index: 2;
+  }
+  .cta-banner {
+    background-color: var(--color-charcoal);
+    color: var(--color-off-white);
+    padding: var(--spacing-xl);
+    text-align: center;
+    border-radius: 4px;
+    margin-top: var(--spacing-xxl);
+    border: 1px solid rgba(184, 139, 74, 0.3);
+  }
+  .cta-banner h3 {
+    color: var(--color-brushed-brass);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  .cta-banner p {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-md) auto;
+    opacity: 0.95;
+  }
+  .cta-banner .btn {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 992px) {
+    .story-section {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+    .story-image-box {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .principles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .principles-grid {
+      grid-template-columns: 1fr;
+    }
+    .stats-bar {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+  }
+</style>
