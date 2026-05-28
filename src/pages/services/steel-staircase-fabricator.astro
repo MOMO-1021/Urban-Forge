@@ -1,29 +1,87 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import ServiceCTA from '../../components/ServiceCTA.astro';
 ---
 
 <Layout title="Steel Staircase Fabricator New York | Urban Forge">
   <Header />
+  
   <main class="container service-detail">
     <div class="breadcrumb">
       <a href="/services">Services</a> &gt; <span>Steel Staircases</span>
     </div>
+    
     <h1>Steel Staircase Fabricator in New York</h1>
+    
     <img src="/images/steel_staircase.png" alt="Steel Staircase Fabricator" class="hero-image" />
+    
     <div class="content-body">
-      <h2>Floating, Spiral, and Industrial Stairs</h2>
-      <p>We are NYC's premier steel staircase fabricators. Whether you need a minimalist floating staircase for a Manhattan penthouse or a heavy-duty industrial spiral stair, we handle structural steel engineering and fabrication.</p>
-      <h3>Structural vs. Light Gauge</h3>
-      <p>We work closely with engineers and architects to determine the right materials for the load requirements, prioritizing safety and aesthetic design.</p>
+      <h2>Bespoke Floating, Spiral, and Mono-Stringer Staircases</h2>
+      <p>A staircase is more than a way to move between floors; it is a primary structural statement. At Urban Forge, we are New York's premier steel staircase fabricators. We specialize in designing and engineering custom stair systems, including dramatic mono-stringer floating stairs, space-saving spiral staircases, complex helical curves, and industrial-lofts stairs. Our master fabricators build structures that combine massive structural load-carrying capacity with clean, modern, and high-end aesthetics.</p>
+      
+      <h3>Structural Steel vs. Light Gauge Fabrication</h3>
+      <p>Stair fabrication is a specialized branch of structural metalworking. Unlike ornamental shops that work only with thin-gauge sheet metals, we possess the tooling and certifications to handle heavy structural steel elements. We work with thick-walled carbon steel channel beams, I-beams, and solid plates. This heavy-duty construction ensures that your staircase has zero bounce, springiness, or vibration when walked on, providing a solid feel of permanence underfoot.</p>
+      
+      <h3>Strict NYC Building Code Compliance for Stairs</h3>
+      <p>Staircases are subject to the strictest safety and code inspections of any building element. We handle all detailing to guarantee your custom stairs are fully compliant with local NYC building codes:</p>
+      <ul>
+        <li><strong>Riser & Tread Sizing:</strong> Riser heights must be consistent and stand between 7 and 7.75 inches, while tread depths must be at least 10 inches to ensure safe footing.</li>
+        <li><strong>Load Requirements:</strong> Residential stairs must support a minimum live load of 40 pounds per square foot, while commercial stairs must support 100 pounds per square foot.</li>
+        <li><strong>Landings & Winders:</strong> We design winders and intermediate landings with precise turning radius geometry to satisfy code limits on continuous vertical rise.</li>
+      </ul>
+      
+      <h3>Collaboration with Architects & Structural Engineers</h3>
+      <p>We work in close partnership with structural engineers, general contractors, and architects from the early stages of design. We take precise digital on-site field measurements using laser scanners to account for existing walls and floor levels. Then, we generate complete shop drawings for engineering review and structural approval. All of our structural welds are performed by certified welders, meeting American Welding Society (AWS) standards and local building department inspection requirements.</p>
+      
+      <h3>Material Transitions & Architectural Finishes</h3>
+      <p>We build steel staircase frames designed to integrate seamlessly with other luxury materials. We fabricate custom mounting plates and channels to support treads made of thick white oak, walnut, polished marble, or structural glass panels. For the steel frames, we offer a range of finishes: raw blackened steel sealed with penetrol, shop-applied rust-inhibitive primer ready for field paint, or durable electrostatic powder coatings that resist high foot traffic.</p>
+
+      <ServiceCTA title="Ready to build a monumental staircase?" buttonText="Talk to a Stair Fabricator" />
     </div>
   </main>
 </Layout>
+
 <style>
-  .service-detail { padding: var(--spacing-xl) 0; max-width: 800px; }
-  .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: var(--spacing-md); }
-  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-lg); color: var(--color-matte-black); }
-  .hero-image { width: 100%; border: 2px solid var(--color-brushed-brass); margin-bottom: var(--spacing-xl); }
-  .content-body h2, .content-body h3 { color: var(--color-matte-black); margin-top: var(--spacing-lg); }
-  .content-body p { font-size: 1.1rem; line-height: 1.6; color: #444; }
+  .service-detail {
+    padding: var(--spacing-xl) 0;
+    max-width: 800px;
+  }
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: var(--spacing-md);
+  }
+  .breadcrumb a {
+    color: var(--color-brushed-brass);
+  }
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-matte-black);
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xl);
+    border: 2px solid var(--color-brushed-brass);
+  }
+  .content-body h2, .content-body h3 {
+    color: var(--color-matte-black);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-body p, .content-body ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: var(--spacing-md);
+  }
+  .content-body ul {
+    padding-left: 20px;
+  }
+  .content-body li {
+    margin-bottom: 0.5rem;
+  }
 </style>

@@ -1,29 +1,87 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import ServiceCTA from '../../components/ServiceCTA.astro';
 ---
 
 <Layout title="Minimalist Steel Furniture Custom | Urban Forge">
   <Header />
+  
   <main class="container service-detail">
     <div class="breadcrumb">
       <a href="/services">Services</a> &gt; <span>Steel Furniture</span>
     </div>
+    
     <h1>Custom Minimalist Steel Furniture</h1>
+    
     <img src="/images/minimalist_steel_furniture.png" alt="Minimalist Steel Furniture" class="hero-image" />
+    
     <div class="content-body">
-      <h2>Desks, Tables, and Shelving</h2>
-      <p>Our custom steel furniture combines raw industrial strength with minimalist design. We create bespoke desks, dining tables, shelving units, and bed frames.</p>
-      <h3>Finishes & Pricing</h3>
-      <p>Choose from durable powder-coated finishes or natural patinas. Lead times and pricing vary based on complexity, but we are transparent about the costs of custom metal fabrication.</p>
+      <h2>Bespoke Dining Tables, Desks, and Shelving Units</h2>
+      <p>Discover the perfect fusion of raw industrial strength and refined minimalist design. At Urban Forge, we design and fabricate custom steel furniture tailored for high-end residential interiors and architectural studios. Our custom portfolio includes monumental dining tables, executive desks, floating consoles, and heavy-duty shelving systems. Every piece is constructed to be structurally permanent, featuring clean geometries and tactile finishes that enhance modern architectural environments.</p>
+      
+      <h3>Why Steel Defines Minimalist Furniture</h3>
+      <p>Minimalist design demands slim profiles and large spans. Traditional wood construction requires thick cross-sections and heavy supports to carry structural loads. Steel, however, possesses an exceptional strength-to-thickness ratio. This allows us to engineer table tops that appear to float on impossibly thin legs, and shelving systems with clean, open spans that do not sag under weight. We utilize heavy-gauge structural tubing, flat bars, and solid steel plates to achieve this structural efficiency.</p>
+      
+      <h3>Our Construction & Welding Standards</h3>
+      <p>The difference between commercial metal furniture and artisan-fabricated furniture lies in the joinery. Mass-produced furniture relies on visible screws, bolt plates, and rough welds. Our furniture is fully welded using advanced TIG (Tungsten Inert Gas) welding techniques. We take the time to meticulously grind and sand every weld joint flush, resulting in a completely seamless, monolithic look where metal tubes meet at clean, sharp 90-degree mitered corners.</p>
+      
+      <h3>Bespoke Finishing Options</h3>
+      <p>We believe that a piece's finish is as important as its form. We offer several hand-applied surface treatments to protect the metal while enhancing its natural texture:</p>
+      <ul>
+        <li><strong>Natural Blackened Steel:</strong> A chemical darkening agent applied directly to hot-rolled steel. It preserves the organic "mill scale" variations and is sealed with architectural wax or penetrol.</li>
+        <li><strong>Electrostatic Powder Coating:</strong> Available in a wide spectrum of architectural colors (using the RAL color matching system) and textures. This baked-on finish offers superior scratch and UV resistance.</li>
+        <li><strong>Satin Brushed Stainless Steel:</strong> For high-traffic areas or environments requiring clean, corrosion-free lines.</li>
+      </ul>
+      
+      <h3>Commission Process & Transparent Pricing</h3>
+      <p>Every piece of furniture we build is a custom commission. We collaborate with you to define the exact dimensions, weight distribution, and floor-protection glide needs for your space. We provide transparent pricing and clear lead-time schedules upfront. Typically, commissions take 4 to 8 weeks to complete, depending on complexity and finishing selections.</p>
+
+      <ServiceCTA title="Want a custom steel furniture piece?" buttonText="Discuss Your Commission" />
     </div>
   </main>
 </Layout>
+
 <style>
-  .service-detail { padding: var(--spacing-xl) 0; max-width: 800px; }
-  .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: var(--spacing-md); }
-  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-lg); color: var(--color-matte-black); }
-  .hero-image { width: 100%; border: 2px solid var(--color-brushed-brass); margin-bottom: var(--spacing-xl); }
-  .content-body h2, .content-body h3 { color: var(--color-matte-black); margin-top: var(--spacing-lg); }
-  .content-body p { font-size: 1.1rem; line-height: 1.6; color: #444; }
+  .service-detail {
+    padding: var(--spacing-xl) 0;
+    max-width: 800px;
+  }
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: var(--spacing-md);
+  }
+  .breadcrumb a {
+    color: var(--color-brushed-brass);
+  }
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-matte-black);
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xl);
+    border: 2px solid var(--color-brushed-brass);
+  }
+  .content-body h2, .content-body h3 {
+    color: var(--color-matte-black);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-body p, .content-body ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: var(--spacing-md);
+  }
+  .content-body ul {
+    padding-left: 20px;
+  }
+  .content-body li {
+    margin-bottom: 0.5rem;
+  }
 </style>

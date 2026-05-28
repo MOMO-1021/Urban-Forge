@@ -1,0 +1,65 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  buttonText?: string;
+  buttonLink?: string;
+}
+
+const {
+  title = "Ready to start your project?",
+  subtitle = "Contact our design team to discuss materials and finishes.",
+  buttonText = "Request a Quote",
+  buttonLink = "/contact"
+} = Astro.props;
+---
+
+<div class="cta-box">
+  <h3>{title}</h3>
+  <p>{subtitle}</p>
+  <a href={buttonLink} class="btn btn-secondary">{buttonText}</a>
+</div>
+
+<style>
+  .cta-box {
+    background: var(--color-matte-black);
+    color: var(--color-off-white);
+    padding: var(--spacing-lg);
+    margin-top: var(--spacing-xxl);
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid rgba(184, 139, 74, 0.3);
+  }
+  .cta-box h3 {
+    color: var(--color-brushed-brass);
+    margin-top: 0;
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  .cta-box p {
+    color: var(--color-off-white) !important;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.95;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+  }
+  .cta-box .btn-secondary {
+    border-color: var(--color-brushed-brass) !important;
+    color: var(--color-brushed-brass) !important;
+    background-color: transparent !important;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--color-brushed-brass);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .cta-box .btn-secondary:hover {
+    background-color: var(--color-brushed-brass) !important;
+    color: #ffffff !important;
+  }
+</style>

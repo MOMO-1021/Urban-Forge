@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import ServiceCTA from '../../components/ServiceCTA.astro';
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -24,19 +25,24 @@ const schemaData = {
     <img src="/images/architectural_blacksmiths.png" alt="Architectural Blacksmith NYC" class="hero-image" />
     
     <div class="content-body">
-      <h2>Defining Architectural Blacksmithing in NYC</h2>
-      <p>As premier <strong>architectural blacksmiths</strong>, we bridge the gap between historic metalworking techniques and modern engineering. From restoring historic ironwork in Brooklyn Heights to creating striking modern staircases in Manhattan lofts, our custom collaboration process ensures your vision becomes a forged reality.</p>
+      <h2>Bespoke Architectural Blacksmithing & Artistry</h2>
+      <p>As premier <strong>architectural blacksmiths</strong>, Urban Forge bridges the gap between historic hand-forging techniques and modern structural engineering. Every project we undertake is forged by hand on our anvils, heated to over 2,000°F in our custom gas and coal forges, and shaped by our master blacksmiths. Unlike automated CNC milling or generic welding shops, hand-forging introduces subtle, unique variations and rich textures into the metal. This organic character cannot be mass-produced, making each piece a lasting work of functional art.</p>
       
-      <h3>Our Service Areas</h3>
-      <p>We proudly serve the five boroughs of New York City and the surrounding areas:</p>
-      <ul class="area-list">
-        <li>Manhattan & Brooklyn</li>
-        <li>Queens & The Bronx</li>
-        <li>Staten Island</li>
-        <li>Westchester County & Long Island</li>
+      <h3>Our Forging Capabilities & Processes</h3>
+      <p>From our fully equipped local metalworks, we provide complete blacksmithing services for high-end residential estates, commercial lobbies, and historical restorations:</p>
+      <ul>
+        <li><strong>Hand-Hammered Scrollwork:</strong> Intricate, flowing details for custom grilles, driveway gates, and ornamental stair balusters shaped using traditional hammers and swage blocks.</li>
+        <li><strong>Bespoke Architectural Hardware:</strong> Custom-designed strap hinges, pull handles, latches, and registers forged to match specific architectural periods.</li>
+        <li><strong>Structural Joinery:</strong> Utilizing traditional joinery methods such as mortise-and-tenon joints, hot-punched holes, and hand-driven rivets for structural integrity and timeless historical aesthetics.</li>
+        <li><strong>Blacksmithing Restoration:</strong> Recreating missing or damaged ironwork details for historic buildings using period-correct alloys and techniques.</li>
       </ul>
+      
+      <h3>NYC Historic Landmarks Preservation</h3>
+      <p>Working on properties in historic districts—such as Brooklyn Heights, Greenwich Village, or Park Slope—requires deep respect for architectural preservation. We collaborate closely with architects and the NYC Landmarks Preservation Commission (LPC) to replicate historic configurations exactly. Our blacksmiths analyze existing wrought iron gates, window grilles, and railings to match original profiles, dimensions, and hand-applied finishes, ensuring seamless approval and compliance.</p>
+      
+      <h3>Engineering & Material Certification</h3>
+      <p>While our craft is rooted in tradition, our structural works are engineered for the modern world. We work alongside licensed structural engineers to certify the load ratings of our hand-forged assemblies. Whether we are forging heavy structural brackets, floating staircase frames, or security gates, we provide complete welding certifications and material reports to satisfy local building codes and inspection guidelines.</p>
 
-      <h3>Client Testimonials</h3>
       <blockquote class="testimonial">
         "Urban Forge designed a custom wrought iron gate for our brownstone that perfectly matched the historic neighborhood. True artisans!"<br>
         <strong>- Sarah T., Brooklyn, NY</strong>
@@ -45,13 +51,10 @@ const schemaData = {
       <div class="map-container">
         <h3>Visit Our Metalworks</h3>
         <p>123 Broadway, New York, NY 10001</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x89c259af18ac2511%3A0x600647cbf2da1823!2sBroadway%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://maps.google.com/maps?q=123%20Broadway,%20New%20York,%20NY%2010001&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       
-      <div class="cta-box">
-        <h3>Looking for a Metal Fabricator?</h3>
-        <a href="/contact" class="btn btn-secondary">Contact Our Team</a>
-      </div>
+      <ServiceCTA title="Looking for a Metal Fabricator?" buttonText="Contact Our Team" />
     </div>
   </main>
   
@@ -94,6 +97,12 @@ const schemaData = {
     color: #444;
     margin-bottom: var(--spacing-md);
   }
+  .content-body ul {
+    padding-left: 20px;
+  }
+  .content-body li {
+    margin-bottom: 0.5rem;
+  }
   .testimonial {
     font-style: italic;
     background: #f4f4f4;
@@ -103,37 +112,5 @@ const schemaData = {
   }
   .map-container {
     margin: 3rem 0;
-  }
-  .cta-box {
-    background: var(--color-matte-black);
-    color: var(--color-off-white);
-    padding: var(--spacing-lg);
-    margin-top: var(--spacing-xxl);
-    text-align: center;
-    border-radius: 4px;
-    border: 1px solid rgba(184, 139, 74, 0.3);
-  }
-  .cta-box h3 {
-    color: var(--color-brushed-brass);
-    margin-top: 0;
-  }
-  .cta-box p {
-    color: var(--color-off-white) !important;
-    margin-bottom: var(--spacing-md);
-    opacity: 0.95;
-  }
-  .cta-box .btn-secondary {
-    border-color: var(--color-brushed-brass) !important;
-    color: var(--color-brushed-brass) !important;
-    background-color: transparent !important;
-  }
-  .cta-box .btn-secondary:hover {
-    background-color: var(--color-brushed-brass) !important;
-    color: #ffffff !important;
-  }
-  .area-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
   }
 </style>

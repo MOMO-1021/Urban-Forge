@@ -1,29 +1,85 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import ServiceCTA from '../../components/ServiceCTA.astro';
 ---
 
 <Layout title="Custom Brass Door Hardware New York | Urban Forge">
   <Header />
+  
   <main class="container service-detail">
     <div class="breadcrumb">
       <a href="/services">Services</a> &gt; <span>Brass Door Hardware</span>
     </div>
+    
     <h1>Custom Brass Door Hardware in New York</h1>
+    
     <img src="/images/custom_brass_hardware.png" alt="Custom Brass Door Hardware" class="hero-image" />
+    
     <div class="content-body">
-      <h2>Bespoke Knobs, Levers, and Hinges</h2>
-      <p>Details matter. Our custom brass door hardware elevates any interior. From polished brass levers to unlacquered kickplates that develop a beautiful patina, we work with interior designers to create unique statement pieces.</p>
-      <h3>Designer Collaboration</h3>
-      <p>We regularly collaborate with NYC's top interior designers to machine and forge custom hardware that you cannot find in a catalog.</p>
+      <h2>Bespoke Knobs, Levers, and Statement Entry Handles</h2>
+      <p>In luxury interiors, details make the design. Custom brass door hardware elevates standard entryways into architectural statement pieces. At Urban Forge, we design, machine, and finish bespoke knobs, levers, escutcheons, hinges, and heavy front-door pull bars. Working with premium solid brass and architectural bronze, our artisans create tactile pieces that feel substantial in the hand and match the precise design vocabulary of your home or commercial build.</p>
+      
+      <h3>The beauty of Unlacquered "Living" Finishes</h3>
+      <p>Unlike mass-produced, gold-painted hardware that degrades over time, our hardware is machined from solid, high-grade brass bar stock. We specialize in unlacquered finishes, which are considered "living" finishes. Without a chemical lacquer lock, the brass reacts with ambient air and touch, naturally aging to develop a deep, organic patina. We offer a variety of surface treatments to kickstart this process or achieve specific design aesthetics:</p>
+      <ul>
+        <li><strong>Satin Brushed Brass:</strong> Linear, hand-abraded textures that offer a soft, warm luster, perfect for contemporary minimalist homes.</li>
+        <li><strong>Polished Unlacquered Brass:</strong> Bright and reflective initially, this finish matures over months of handling, gathering a unique character in high-use areas.</li>
+        <li><strong>Statuary Bronze Patina:</strong> Chemically oxidised to produce a deep, chocolate-brown tone with warm golden undertones highlighted along the edges.</li>
+        <li><strong>Burnished Antique Brass:</strong> Hand-rubbed with special waxes to replicate decades of natural wear, ideal for historic townhouse restorations.</li>
+      </ul>
+      
+      <h3>Collaboration with Interior Designers & Architects</h3>
+      <p>We work closely with NYC's top interior designers and architects to manufacture hardware that cannot be found in standard catalogs. Whether you have a precise CAD drawing, a 3D model, or just a hand-drawn sketch, we can translate your concept into functional hardware. We handle all design prototyping, pattern making, and machining tolerances to ensure a perfect result.</p>
+      
+      <h3>Engineering & Mechanical Lock Compatibility</h3>
+      <p>A beautiful lever is only useful if it operates flawlessly. Our engineering team ensures all custom door levers, knobs, and thumbturns are fully compatible with premium mortise locks, tubular latches, and multi-point security locks from manufacturers like Baldwin, Accurate, and Arrow. We precision-engineer the internal spindle sizes, spring returns, and mounting roses to prevent sagging, binding, or mechanical failure, guaranteeing decades of smooth operation.</p>
+
+      <ServiceCTA title="Ready to spec custom hardware?" buttonText="Consult an Artisan" />
     </div>
   </main>
 </Layout>
+
 <style>
-  .service-detail { padding: var(--spacing-xl) 0; max-width: 800px; }
-  .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: var(--spacing-md); }
-  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-lg); color: var(--color-matte-black); }
-  .hero-image { width: 100%; border: 2px solid var(--color-brushed-brass); margin-bottom: var(--spacing-xl); }
-  .content-body h2, .content-body h3 { color: var(--color-matte-black); margin-top: var(--spacing-lg); }
-  .content-body p { font-size: 1.1rem; line-height: 1.6; color: #444; }
+  .service-detail {
+    padding: var(--spacing-xl) 0;
+    max-width: 800px;
+  }
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: var(--spacing-md);
+  }
+  .breadcrumb a {
+    color: var(--color-brushed-brass);
+  }
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-matte-black);
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xl);
+    border: 2px solid var(--color-brushed-brass);
+  }
+  .content-body h2, .content-body h3 {
+    color: var(--color-matte-black);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-body p, .content-body ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: var(--spacing-md);
+  }
+  .content-body ul {
+    padding-left: 20px;
+  }
+  .content-body li {
+    margin-bottom: 0.5rem;
+  }
 </style>

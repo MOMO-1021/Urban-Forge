@@ -1,30 +1,85 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import ServiceCTA from '../../components/ServiceCTA.astro';
 ---
 
 <Layout title="Custom Fireplace Screens New York | Urban Forge">
   <Header />
+  
   <main class="container service-detail">
     <div class="breadcrumb">
       <a href="/services">Services</a> &gt; <span>Fireplace Screens</span>
     </div>
+    
     <h1>Custom Fireplace Screens in New York</h1>
-    <!-- Fallback image as limit was reached -->
+    
     <img src="/images/custom_railings.png" alt="Custom Fireplace Screens" class="hero-image" />
+    
     <div class="content-body">
-      <h2>Modern and Traditional Surrounds</h2>
-      <p>Transform your NYC apartment or townhome with a custom fireplace screen. We work with materials that withstand intense heat while providing a stunning visual centerpiece.</p>
-      <h3>Materials & Finishes</h3>
-      <p>From hot-rolled steel paneling to intricately woven mesh, our finishes are designed to complement both traditional mantels and modern minimalist surrounds.</p>
+      <h2>Modern and Traditional Fireplace Surrounds</h2>
+      <p>Transform your fireplace into a striking architectural centerpiece while protecting your home. At Urban Forge, we design and forge custom fireplace screens, glass doors, and surround paneling. Whether you are seeking a minimalist, modern steel frame for a luxury Manhattan apartment or a decorative wrought-iron guard for a historic hearth, our blacksmiths execute every commission with rigorous attention to detail, thermal safety, and structural longevity.</p>
+      
+      <h3>Heirloom-Quality Materials & Custom Finishes</h3>
+      <p>A fireplace screen is subjected to intense thermal cycling. Standard commercial screens warp, discolor, or flake under high temperatures. We address this by fabricating frames from heavy-gauge hot-rolled steel, brass, or stainless steel. Furthermore, we use specialized high-temperature finishes that withstand heat while developing a rich patina over time:</p>
+      <ul>
+        <li><strong>Blackened Steel with Wax:</strong> Treated with high-temperature patinas and sealed with natural waxes. This creates a deep gunmetal color that highlights the iron's natural texture.</li>
+        <li><strong>High-Temperature Matte Coatings:</strong> Baked-on finishes rated to withstand temperatures up to 1200°F without peeling, ideal for active wood-burning hearths.</li>
+        <li><strong>Polished Brass & Bronze Accents:</strong> Adding hand-forged accents, handles, or base plates that reflect the fire's warm light and age beautifully.</li>
+        <li><strong>Tempered Glass Panels:</strong> Integrating high-temperature ceramic glass panels to improve fireplace efficiency and control drafts when closed.</li>
+      </ul>
+      
+      <h3>Uncompromising Safety & Sparks Protection</h3>
+      <p>While aesthetics are critical, a fireplace screen's primary purpose is safety. We custom-weave heavy-duty metal mesh designed to contain popping embers and sparks without obstructing the view of the fire. The mesh is securely welded to the frame, ensuring it will not sag, warp, or pull away under extreme heat. We build free-standing screens with weighted, low-profile feet, as well as flush-mount screens that anchor directly to the masonry for absolute stability.</p>
+      
+      <h3>Masonry Integration & Precision Fitment</h3>
+      <p>No two stone or brick fireplaces are identical. Traditional stone hearths often feature uneven surfaces and joints. We conduct detailed on-site measurements and template-making to ensure your screen fits flush against the masonry. This prevents rogue sparks from escaping through gaps and guarantees a seamless visual integration that looks like it was born with the room.</p>
+
+      <ServiceCTA title="Ready to start your fireplace project?" buttonText="Request a Hearth Quote" />
     </div>
   </main>
 </Layout>
+
 <style>
-  .service-detail { padding: var(--spacing-xl) 0; max-width: 800px; }
-  .breadcrumb { font-size: 0.9rem; color: #666; margin-bottom: var(--spacing-md); }
-  h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-lg); color: var(--color-matte-black); }
-  .hero-image { width: 100%; border: 2px solid var(--color-brushed-brass); margin-bottom: var(--spacing-xl); }
-  .content-body h2, .content-body h3 { color: var(--color-matte-black); margin-top: var(--spacing-lg); }
-  .content-body p { font-size: 1.1rem; line-height: 1.6; color: #444; }
+  .service-detail {
+    padding: var(--spacing-xl) 0;
+    max-width: 800px;
+  }
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: var(--spacing-md);
+  }
+  .breadcrumb a {
+    color: var(--color-brushed-brass);
+  }
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-matte-black);
+  }
+  .hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: var(--spacing-xl);
+    border: 2px solid var(--color-brushed-brass);
+  }
+  .content-body h2, .content-body h3 {
+    color: var(--color-matte-black);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+  .content-body p, .content-body ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: var(--spacing-md);
+  }
+  .content-body ul {
+    padding-left: 20px;
+  }
+  .content-body li {
+    margin-bottom: 0.5rem;
+  }
 </style>
