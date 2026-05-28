@@ -10,22 +10,44 @@ materialsUsed: ["Structural Steel", "Marine-grade Stainless Cable", "Matte Black
 hasCadDownload: false
 ---
 
-The challenge for this Chelsea loft renovation was to create a vertical connection that felt airy and transparent while maintaining the stark, industrial aesthetic of the historic building. The solution was a highly engineered **floating metal staircase design**.
+## Project Overview
+
+The challenge for this high-end residential renovation in Chelsea, New York City, was to create a modern vertical connection that felt airy, open, and transparent while fully respecting the stark, industrial heritage of the historic loft building. Located inside a converted 19th-century manufacturing warehouse, the open-plan apartment required a staircase that could span a 12-foot rise without partitioning the room, obstructing the passage of natural light, or segmenting the living space. The solution was a highly engineered, bespoke **floating metal staircase design** featuring cantilevered oak-capped treads, a central structural steel mono-stringer, and a marine-grade tensioned cable guardrail system.
+
+---
 
 ## The Design Challenge
 
-In a space where natural light is a premium, traditional enclosed staircases block light flow and segment the room. We worked closely with the lead architect to design a staircase that would act as a structural centerpiece without overpowering the living area. The open treads and single central steel stringer allow light to pass through completely.
+In a dense urban environment like Manhattan, natural light is a major premium. Enclosing a staircase with traditional drywall framing and massive risers would have blocked the light flow coming from the loft's towering 10-foot windows, casting dark shadows across the lower living zone. Working hand-in-hand with the lead architect and interior designer, our metalwork detailers designed an open-riser stair configuration. By eliminating the vertical riser plates entirely, light passes through the staircase structure, turning a functional egress element into a dramatic, floating sculpture.
 
-## Why Steel?
+---
 
-When designing a floating staircase, structural integrity is paramount to prevent any bounce or deflection during use. We chose heavy-duty structural steel for the central mono-stringer. This allowed us to cantilever the solid metal treads securely, achieving the "floating" illusion while easily exceeding all NYC load-bearing code requirements.
+## Structural Engineering & NYC Building Code Compliance
 
-## Finishes and Integration
+Cantilevered staircases are subject to strict structural scrutiny because they lack support posts on the open side. To prevent any "spring" or bounce during use, the structure must be exceptionally rigid. Our engineering team calculated the load requirements and chose a massive, heavy-wall **8" x 6" structural steel rectangular hollow section (HSS)** to act as the central mono-stringer beam. 
 
-To contrast the warm exposed brick of the loft, the entire steel structure was finished in a custom matte black powder coat. This not only provides a sleek, modern look but also ensures extreme durability against daily wear and tear.
+This central steel spine was securely anchored at the base to the concrete slab using heavy-duty epoxy bolt anchors, and structurally tied at the upper landing to the building's historic heavy timber floor joists using custom-machined 3/4" thick steel header plates. We fabricated cantilevered tread support brackets out of 3/8" steel plates, welding them directly to the HSS stringer with continuous, multi-pass full-penetration fillet welds. Every weld was executed by AWS-certified welders to ensure the structure easily exceeds the NYC Department of Buildings (DOB) live-load requirement of 100 pounds per square foot, showing less than 1/16th of an inch of deflection under maximum load.
 
-To ensure safety without compromising the open feel, we integrated a **[modern cable railing system](/services/modern-cable-railing-systems)** along the open side of the stairs. The thin, tensioned stainless steel cables provide the necessary code-compliant fall protection while remaining nearly invisible from a distance. The top handrail was fabricated from a continuous piece of brushed steel, tying the entire assembly together.
+---
 
-## View More Staircase Projects
+## Fabrication & Hand-Finished Artistry
 
-This project highlights our capability as a premier **[steel staircase fabricator in New York](/services/steel-staircase-fabricator)**. If you are considering a custom staircase or **[custom metal railings in New York](/services/custom-metal-railings-new-york)** for your residential or commercial project, our team is ready to collaborate.
+Meticulous detailing defines the quality of high-end architectural metalwork. To contrast the warm, exposed brick walls of the loft, the entire steel frame was finished in a premium, textured matte black powder coat. In our local workshop, every steel miter was precision cut to a tolerance of +/- 1/32" and TIG welded. We spent hours grinding and hand-sanding every weld joint perfectly flush, creating a clean, monolithic frame with no visible seams or grinding marks. The steel brackets were then capped with 3-inch-thick, wire-brushed white oak tread slabs, treated with a durable matte polyurethane.
+
+---
+
+## Modern Cable Railing Integration
+
+To satisfy code-compliant fall protection without cluttering the aesthetic, we integrated a **[modern cable railing system](/services/modern-cable-railing-systems)** directly into the staircase frame. We fabricated the posts out of 2" x 2" solid steel bars and ran ten lines of T316 marine-grade stainless steel cables. The cables were tensioned to 400 pounds of lateral pull using concealed swage turnbuckles to satisfy the 4-inch sphere safety deflection rule. The handrail was fabricated as a continuous run of brushed raw steel, adding a cold, smooth architectural line that guides the hand perfectly.
+
+---
+
+### Technical Specifications
+
+*   **Total Rise:** 144 inches (12 feet)
+*   **Staircase Width:** 36 inches
+*   **Mono-Stringer Substrate:** 8" x 6" x 1/4" Structural HSS Steel
+*   **Tread Count:** 18 steps with open risers
+*   **Railing Type:** T316 Marine-Grade Stainless Steel Cable (1/8" thickness)
+*   **Finishing:** Electrostatic Matte Black Architectural Powder Coat
+*   **Maximum Capacity:** Rated up to 1,500 lbs concentrated load

@@ -124,8 +124,15 @@ const portfolioEntries = await getCollection('portfolio');
 
   .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
+  }
+
+  @media (max-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-md);
+    }
   }
 
   .portfolio-card {
@@ -136,6 +143,7 @@ const portfolioEntries = await getCollection('portfolio');
     color: inherit;
     transition: all 0.3s ease;
     overflow: hidden;
+    border-radius: 4px;
   }
   
   .portfolio-card:hover {
@@ -195,15 +203,14 @@ const portfolioEntries = await getCollection('portfolio');
   @media (max-width: 768px) {
     .portfolio-grid {
       grid-template-columns: 1fr;
-      gap: 0;
+      gap: var(--spacing-md);
     }
     .portfolio-card {
-      border: none;
-      border-bottom: 1px solid #eaeaea;
-      border-radius: 0;
+      border: 1px solid #eaeaea;
+      border-radius: 4px;
     }
     .image-container {
-      height: 400px; /* Big, immersive images on mobile */
+      height: 280px; /* Elegant height for mobile devices */
     }
     main.container.section {
       padding-left: 0;
