@@ -79,8 +79,8 @@ const portfolioEntries = await getCollection('portfolio');
   }
   .elegant-title {
     color: var(--color-off-white);
-    font-size: clamp(3rem, 6vw, 5rem);
-    letter-spacing: 6px;
+    font-size: clamp(2rem, 8vw, 5rem);
+    letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
     font-weight: 300;
@@ -218,6 +218,12 @@ const portfolioEntries = await getCollection('portfolio');
     }
     .filter-nav {
       padding: 0 var(--spacing-md);
+      flex-direction: column;
+      align-items: center;
+    }
+    .filter-nav button {
+      width: 100%;
+      max-width: 250px;
     }
   }
 </style>
