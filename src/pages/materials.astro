@@ -3,155 +3,367 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 ---
 
-<Layout title="Materials & Finishes">
+<Layout title="Materials & Finishes Library | Architectural Specs">
   <Header />
   
-  <section class="page-header" style="background-color: var(--color-charcoal); color: var(--color-off-white); text-align: center; padding: var(--spacing-xxl) 0;">
-    <div class="container">
-      <h1 style="color: var(--color-off-white);">Materials & Finishes</h1>
-      <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto;">Understanding the substrate and surface treatments that define our work.</p>
+  <section class="page-header bg-dark" style="text-align: left;">
+    <div class="container relative-z">
+      <h1>Materials & Finishes Vault</h1>
+      <p class="subtitle">Comprehensive structural substrate and surface finish specifications for architects and designers.</p>
     </div>
   </section>
 
   <main class="container section">
-    <div class="intro-text" style="max-width: 800px; margin: 0 auto var(--spacing-xl); text-align: center;">
-      <p>The foundation of every custom piece is the material itself. We specialize in working with architectural-grade metals, each offering unique structural properties and aesthetic possibilities. Our finishing techniques range from time-honored chemical patinas to state-of-the-art powder coatings.</p>
+    
+    <div class="intro-text" style="max-width: 900px;">
+      <h2>Substrate Selection Matrix</h2>
+      <p class="lead-text">The foundation of every custom architectural metalwork piece begins with uncompromising substrate selection. At Urban Forge, our decades of metallurgical expertise and structural engineering background ensure that we specify the perfect alloy for your project's unique demands.</p>
+      <div class="visual-break">
+        <img src="/images/steel_staircase.png" alt="Engineering precision in steel" class="inline-visual" />
+      </div>
+      <p>We do not compromise on material integrity. We specialize in structural-grade metals, each offering distinct tensile properties, deflection limits, and environmental resistance. Whether we are fabricating a monumental staircase subject to heavy dynamic loads or a delicate brass screen for a luxury interior, understanding the underlying metallurgy is crucial to our process and to the longevity of the final installation.</p>
     </div>
 
-    <!-- Base Metals -->
-    <h2 class="section-title">Base Metals</h2>
-    <div class="grid material-grid">
-      <div class="material-card">
-        <img class="color-swatch-img" src="/images/steel.jpg" alt="Mild & Hot-Rolled Steel" />
-        <h3>Mild & Hot-Rolled Steel</h3>
-        <p>The workhorse of architectural fabrication. Offers immense strength and a beautiful, organic "mill scale" texture when left exposed. Ideal for structural railings, monumental stairs, and raw industrial aesthetics.</p>
+    <!-- Material Comparison Matrix -->
+    <div class="matrix-grid">
+      
+      <!-- Steel -->
+      <div class="matrix-card">
+        <div class="matrix-image" style="background-image: url('/images/materials/macro_raw_steel.png'), url('/images/steel.jpg');"></div>
+        <div class="matrix-content">
+          <h3>Mild & Hot-Rolled Steel</h3>
+          <span class="tag">Structural Core</span>
+          <p>The undisputed workhorse of architectural fabrication. Mild steel (typically ASTM A36 or A992) offers immense tensile strength and rigidity, making it our primary choice for heavy load-bearing applications. When left exposed, hot-rolled steel presents a beautiful, organic "mill scale" texture—a dark, mottled surface created during the steel-making process.</p>
+          <p>While exceptionally strong, steel requires rigorous surface protection to prevent oxidation, especially in exterior environments.</p>
+          <ul class="specs-list">
+            <li><strong>Yield Strength:</strong> ~36,000 to 50,000 psi</li>
+            <li><strong>Corrosion Resistance:</strong> Low (Requires primer, powder coat, or galvanization)</li>
+            <li><strong>Best Applications:</strong> Monumental stairs, structural railings, heavy driveway gates, and industrial loft aesthetics.</li>
+          </ul>
+        </div>
       </div>
       
-      <div class="material-card">
-        <img class="color-swatch-img" src="/images/brass.jpg" alt="Architectural Brass & Bronze" />
-        <h3>Architectural Brass & Bronze</h3>
-        <p>Living materials that age gracefully over time. Brass brings a warm, luxurious glow to any space, while bronze offers deep, sculptural permanence. Perfect for high-end hardware, handrails, and accents.</p>
+      <!-- Brass / Bronze -->
+      <div class="matrix-card">
+        <div class="matrix-image" style="background-image: url('/images/materials/macro_brushed_brass.png'), url('/images/brass.jpg');"></div>
+        <div class="matrix-content">
+          <h3>Architectural Brass & Bronze</h3>
+          <span class="tag">Living Alloy</span>
+          <p>Brass and bronze are "living" copper-based alloys that interact with their environment, gracefully aging over time. Brass brings a warm, golden luxury to any space, while bronze offers deep, sculptural permanence with a rich historical pedigree.</p>
+          <p>Beyond their aesthetic superiority, these alloys are naturally antimicrobial and highly resistant to structural degradation, making them ideal for high-touch surfaces in luxury residential and commercial settings.</p>
+          <ul class="specs-list">
+            <li><strong>Yield Strength:</strong> ~20,000 - 45,000 psi</li>
+            <li><strong>Corrosion Resistance:</strong> High (Develops a protective, natural surface patina)</li>
+            <li><strong>Best Applications:</strong> Luxury handrails, bespoke door hardware, elevator cab accents, and fine architectural trim.</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="material-card">
-        <img class="color-swatch-img" src="/images/aluminum.jpg" alt="Aluminum" />
-        <h3>Aluminum</h3>
-        <p>Lightweight and inherently corrosion-resistant. Aluminum is our preferred substrate for exterior gates, outdoor furniture, and coastal environments where saltwater degradation is a concern.</p>
+      <!-- Aluminum -->
+      <div class="matrix-card">
+        <div class="matrix-image" style="background-image: url('/images/aluminum.jpg');"></div>
+        <div class="matrix-content">
+          <h3>Architectural Aluminum</h3>
+          <span class="tag">Marine Grade</span>
+          <p>Lightweight, incredibly durable, and inherently corrosion-resistant. We specify marine-grade aluminum alloys (such as 6061-T6 or 5052) for projects where weight reduction and supreme weather resistance are paramount.</p>
+          <p>Unlike steel, aluminum does not rust; it oxidizes to form a microscopic, protective outer layer. When properly anodized or powder-coated, it provides decades of maintenance-free performance in the harshest climates.</p>
+          <ul class="specs-list">
+            <li><strong>Yield Strength:</strong> ~35,000 psi (6061-T6)</li>
+            <li><strong>Corrosion Resistance:</strong> Excellent (Highly recommended for coastal environments)</li>
+            <li><strong>Best Applications:</strong> Exterior coastal railings, outdoor furniture, lightweight privacy screens, and rooftop pergolas.</li>
+          </ul>
+        </div>
       </div>
+
     </div>
 
-    <hr class="divider" style="margin: var(--spacing-xxl) auto;" />
+    <hr class="divider" style="margin: var(--spacing-lg) 0;" />
 
-    <!-- Finishes & Patinas -->
-    <h2 class="section-title">Finishes & Patinas</h2>
-    <div class="grid finish-grid">
-      <div class="finish-item">
-        <div class="finish-image" style="background-color: #1A1A1A;"></div>
-        <h4>Matte Black Powder Coat</h4>
-        <p>A baked-on, highly durable finish that resists scratching, chipping, and fading. Offers a clean, modern aesthetic with zero maintenance. Suitable for both indoor and outdoor use.</p>
+    <!-- Visual Finish Library -->
+    <div class="intro-text" style="max-width: 900px; margin-bottom: var(--spacing-lg);">
+      <h2>Visual Finish Library & Technical Surface Treatments</h2>
+      <p>The final finish is where raw metal is transformed into bespoke art. Our proprietary finishing processes are executed in-house by master artisans and range from time-honored chemical patinas that react organically with the metal's surface, to state-of-the-art polymer powder coatings baked at high temperatures for ultimate, commercial-grade durability.</p>
+      <p>We work closely with architects to specify the exact finish that meets both the visual intent of the space and the rigorous demands of the installation environment.</p>
+    </div>
+
+    <div class="finish-library-grid">
+      
+      <div class="finish-card">
+        <div class="finish-swatch" style="background-color: #1A1A1A;"></div>
+        <div class="finish-details">
+          <h4>Matte Black Powder Coat</h4>
+          <span class="finish-type">Applied Polymer Coating</span>
+          <p>Our most requested finish for modern, high-traffic applications. Powder coating involves applying a dry, electrostatically charged polymer powder to the grounded metal, which is then cured in an oven at 400°F. This process cross-links the polymers, creating a thick, impermeable barrier that is vastly superior to traditional wet paint.</p>
+          <ul style="margin-left: 0; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 1rem; color: #555; line-height: 1.6;">
+            <li>Highly resistant to scratching, chipping, and UV fading.</li>
+            <li>Environmentally friendly (zero VOCs emitted during application).</li>
+          </ul>
+          <p class="maintenance"><strong>Maintenance:</strong> Zero. Simply wipe clean with mild soap and water.</p>
+        </div>
       </div>
 
-      <div class="finish-item">
-        <div class="finish-image" style="background: linear-gradient(45deg, #2a1610, #4d2b18);"></div>
-        <h4>Statuary Bronze Patina</h4>
-        <p>A chemical oxidation process applied to brass or bronze that artificially ages the metal, resulting in deep, rich brown tones with subtle variations. Waxed for interior protection.</p>
+      <div class="finish-card">
+        <div class="finish-swatch" style="background: linear-gradient(135deg, #2a1610, #4d2b18, #2a1610);"></div>
+        <div class="finish-details">
+          <h4>Statuary Bronze Patina</h4>
+          <span class="finish-type">Chemical / Living Patina</span>
+          <p>An artisanal, accelerated oxidation process applied directly to raw brass or bronze. Using proprietary acidic solutions (such as liver of sulfur), we induce a chemical reaction that permanently alters the molecular structure of the metal's surface. This results in deep, rich brown and auburn tones with stunning organic variations that cannot be replicated by paint.</p>
+          <ul style="margin-left: 0; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 1rem; color: #555; line-height: 1.6;">
+            <li>Highlights the natural texture and tooling marks of the metal.</li>
+            <li>Evolves over time, developing unique wear patterns on high-touch areas (like handrails).</li>
+          </ul>
+          <p class="maintenance"><strong>Maintenance:</strong> Periodic application of museum-grade microcrystalline wax for interior protection.</p>
+        </div>
       </div>
 
-      <div class="finish-item">
-        <div class="finish-image" style="background: repeating-linear-gradient(45deg, #B88B4A, #B88B4A 10px, #d4af37 10px, #d4af37 20px);"></div>
-        <h4>Satin Brushed Brass</h4>
-        <p>A physical finish where the metal is linearly abraded to create a soft, non-reflective sheen. Often sealed with a clear lacquer to prevent natural tarnishing, maintaining its bright luxury.</p>
+      <div class="finish-card">
+        <div class="finish-swatch" style="background: repeating-linear-gradient(45deg, #B88B4A, #B88B4A 2px, #d4af37 4px, #d4af37 6px);"></div>
+        <div class="finish-details">
+          <h4>Satin Brushed Brass</h4>
+          <span class="finish-type">Physical Abrasive Finish</span>
+          <p>A meticulous physical finishing technique where the raw brass is linearly abraded using progressively finer grit sanding belts (typically up to 320 grit). This creates a soft, non-reflective, directional sheen that brilliantly highlights the material's innate golden luxury while hiding minor surface imperfections.</p>
+          <ul style="margin-left: 0; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 1rem; color: #555; line-height: 1.6;">
+            <li>Provides a highly consistent, architectural look.</li>
+            <li>Can be left "raw" to tarnish naturally or sealed to lock in the bright color.</li>
+          </ul>
+          <p class="maintenance"><strong>Maintenance:</strong> Clear-coat catalyzed lacquer prevents tarnishing, requiring only light dusting.</p>
+        </div>
       </div>
       
-      <div class="finish-item">
-        <div class="finish-image" style="background: radial-gradient(circle, #555 0%, #222 100%);"></div>
-        <h4>Blackened Steel</h4>
-        <p>A chemical treatment applied directly to raw steel that turns the surface a deep gunmetal-to-black color while allowing the natural grain and mill scale to show through. Sealed with penetrol or wax.</p>
+      <div class="finish-card">
+        <div class="finish-swatch" style="background: radial-gradient(circle at center, #444 0%, #151515 100%);"></div>
+        <div class="finish-details">
+          <h4>Blackened Steel</h4>
+          <span class="finish-type">Cold Chemical Oxidation</span>
+          <p>A specialized cold-chemical blackening treatment applied to raw mild steel. The solution reacts with the iron in the steel to create a thin layer of black oxide (magnetite). This turns the surface a deep gunmetal-to-black color while allowing the unique mill scale, weld marks, and grain of the underlying steel to telegraph through beautifully.</p>
+          <ul style="margin-left: 0; padding-left: 1.5rem; margin-bottom: 1rem; font-size: 1rem; color: #555; line-height: 1.6;">
+            <li>Perfect for authentic industrial and brutalist architectural styles.</li>
+            <li>Provides minimal corrosion resistance; strictly recommended for interior climate-controlled spaces.</li>
+          </ul>
+          <p class="maintenance"><strong>Maintenance:</strong> Requires regular reapplication of penetrating oil (like Penetrol) or wax to prevent surface rust.</p>
+        </div>
       </div>
+
     </div>
     
-    <div style="text-align: center; margin-top: var(--spacing-xl);">
-      <p style="font-family: var(--font-heading); font-weight: 600; margin-bottom: var(--spacing-md);">Need physical samples for a client presentation?</p>
-      <a href="/contact" class="btn">Request a Sample Box</a>
+    <div class="cta-banner" style="text-align: center;">
+      <h2 style="color: var(--color-off-white); margin-bottom: 0.5rem;">Specify The Urban Forge</h2>
+      <p style="margin-bottom: var(--spacing-md); color: rgba(255,255,255,0.85);">Require a physical sample box, custom patina matching, or detailed cut-sheets for a client presentation?</p>
+      <a href="/contact?role=architect" class="btn btn-secondary cta-btn" style="border-color: var(--color-brushed-brass); color: var(--color-brushed-brass);">Request Sample Box & Specs</a>
     </div>
 
   </main>
 
-  <footer class="bg-dark" style="padding: var(--spacing-lg) 0; text-align: center;">
+  <footer class="bg-dark text-center" style="padding: var(--spacing-lg) 0;">
      <p style="color: var(--color-off-white); margin: 0;">&copy; {new Date().getFullYear()} The Urban Forge. All rights reserved.</p>
   </footer>
 </Layout>
 
 <style>
-  .section-title {
-    text-align: center;
-    margin-bottom: var(--spacing-lg);
+  .page-header {
+    padding: var(--spacing-xxl) 0;
     position: relative;
-    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-brushed-brass);
+    margin-bottom: var(--spacing-xl);
   }
-  .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: var(--color-brushed-brass);
+  .page-header h1 {
+    color: var(--color-brushed-brass);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: var(--spacing-sm);
   }
-  
-  .material-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  
-  .material-card {
-    background: #fff;
-    border: 1px solid #eaeaea;
-    padding: var(--spacing-lg);
-    border-radius: 4px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-  }
-  .material-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-brushed-brass);
-  }
-  
-  .color-swatch-img {
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 4px;
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-off-white);
+    max-width: 700px;
     margin-bottom: var(--spacing-md);
-    border: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .intro-text {
+    max-width: 800px;
+    margin-bottom: var(--spacing-xl);
+    text-align: left;
+  }
+  .intro-text h2 {
+    color: var(--color-matte-black);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: var(--spacing-md);
+  }
+  .intro-text p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  .intro-text p.lead-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-matte-black);
+  }
+  .visual-break {
+    margin: var(--spacing-lg) 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .inline-visual {
+    width: 100%;
+    height: auto;
     display: block;
+    max-height: 400px;
+    object-fit: cover;
   }
-  
-  .finish-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  
-  .finish-item {
-    text-align: center;
-  }
-  
-  .finish-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto var(--spacing-md);
-    border: 3px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  h3, h4 {
-    margin-bottom: 0.5rem;
-  }
-  
+
   .divider {
     border: 0;
     height: 1px;
     background: #e0e0e0;
-    max-width: 200px;
+    margin: var(--spacing-xxl) 0;
+  }
+
+  /* Substrate Matrix */
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    max-width: 900px;
+  }
+  @media (max-width: 768px) {
+    .matrix-grid { 
+      grid-template-columns: 1fr; 
+      gap: var(--spacing-lg); /* Fixed gap between cards */
+    }
+  }
+
+  .matrix-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  .matrix-card:hover {
+    transform: translateY(-5px);
+  }
+  .matrix-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--color-brushed-brass);
+  }
+  .matrix-content {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+  }
+  .matrix-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-matte-black);
+  }
+  .tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    background: rgba(184, 139, 74, 0.1);
+    color: var(--color-brushed-brass);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+  .specs-list {
+    list-style: disc outside;
+    padding: 0 0 0 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid #eaeaea;
+    padding-top: 1.5rem;
+  }
+  .specs-list li {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  .specs-list strong {
+    color: var(--color-matte-black);
+  }
+
+  /* Finish Library */
+  .finish-library-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
+  @media (max-width: 1024px) {
+    .finish-library-grid { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+  }
+
+  .finish-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    background: #fdfdfd;
+    padding: var(--spacing-lg);
+    border: 1px solid #eee;
+    border-radius: 4px;
+    align-items: flex-start;
+  }
+
+  .finish-swatch {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .finish-details h4 {
+    font-size: 1.4rem;
+    color: var(--color-matte-black);
+    margin-bottom: 0.25rem;
+  }
+  .finish-type {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+  .finish-details p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  .maintenance {
+    font-size: 0.85rem;
+    color: var(--color-charcoal) !important;
+    background: #f0f0f0;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    margin-top: 0.5rem;
+  }
+
+  .cta-banner {
+    background-color: var(--color-charcoal);
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: 8px;
+    margin: var(--spacing-lg) auto 0;
+    max-width: 700px;
+    border: 1px solid rgba(184, 139, 74, 0.3);
+  }
+  .cta-btn {
+    width: 90%;
+    max-width: 400px;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
   }
 </style>

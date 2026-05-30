@@ -6,23 +6,37 @@ import Header from '../components/Header.astro';
 <Layout title="Architects Vault & Technical Resources" description="Technical specifications, CAD files, and material tolerances for architects and designers working with The Urban Forge.">
   <Header />
 
-  <section class="architects-hero pattern-bg">
-    <div class="container hero-content">
-      <h1>Architects Vault</h1>
-      <p>Technical resources, specifications, and CAD files for seamless integration of our bespoke metalwork into your visionary projects.</p>
+  <section class="architects-hero pattern-bg" style="text-align: left;">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Architects Vault</h1>
+        <p>Technical resources, specifications, and CAD files for seamless integration of our bespoke metalwork into your visionary projects.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" style="background-color: var(--color-charcoal); padding: var(--spacing-xl) 0;">
-    <div class="container">
+    <div class="container" style="color: rgba(255,255,255,0.85);">
+      
+      <div style="max-width: 900px; margin-bottom: var(--spacing-xl);">
+        <h2 style="color: var(--color-brushed-brass); font-size: 2.2rem; margin-bottom: 1rem;">Engineering for the Discerning Architect</h2>
+        <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">At Urban Forge, we understand that architects and structural engineers require more than just aesthetic metalwork—they require absolute precision, rigorous code compliance, and verifiable structural integrity. Our Architects Vault is designed to bridge the gap between visionary design and practical, code-compliant fabrication.</p>
+        <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">We collaborate with top-tier architectural firms from the schematic design phase through final white-glove installation. Whether navigating the complexities of New York City's Department of Buildings (DOB) regulations or engineering a monumental floating staircase for a private estate, our in-house engineering team provides the technical bedrock for your creative vision.</p>
+      </div>
+
       <div class="resource-grid">
         <div class="resource-card">
           <div class="card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           </div>
           <h3>Material Specifications &amp; Tolerances</h3>
-          <p>Comprehensive cut-sheets detailing tensile strength, load-bearing capacities, and deflection criteria for our structural alloy profiles.</p>
-          <a href="#" class="download-link">Download Spec Sheets (PDF)</a>
+          <p>Access our comprehensive cut-sheets detailing tensile strength, load-bearing capacities, deflection criteria, and thermal expansion coefficients for our primary structural alloy profiles. We provide exact metallurgical data for A36/A992 steel, 6061-T6 aluminum, and our architectural brass series.</p>
+          <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem;">
+            <li>Yield and tensile strength data sheets</li>
+            <li>Recommended deflection limits for glass and cable infills</li>
+            <li>Galvanic corrosion prevention guidelines</li>
+          </ul>
+          <a href="/downloads/spec-sheets.pdf" class="download-link">Download Spec Sheets (PDF)</a>
         </div>
         
         <div class="resource-card">
@@ -30,8 +44,13 @@ import Header from '../components/Header.astro';
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
           </div>
           <h3>CAD &amp; Revit Libraries</h3>
-          <p>2D standard details and 3D models for immediate import into your drawings. Covers standard railing extrusions and baluster spacings.</p>
-          <a href="#" class="download-link">Download CAD / DWG Vault (.ZIP)</a>
+          <p>Streamline your drafting process with our library of 2D standard details and 3D parametric models, ready for immediate import into AutoCAD, Rhino, or Revit. Our library covers standard railing extrusions, typical baluster spacings, anchor plate details, and custom forging profiles.</p>
+          <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem;">
+            <li>Pre-modeled guardrail and handrail profiles</li>
+            <li>Code-compliant baluster spacing templates (4-inch sphere rule)</li>
+            <li>Concealed fastening and anchor plate blocks</li>
+          </ul>
+          <a href="/downloads/cad-vault.zip" class="download-link">Download CAD / DWG Vault (.ZIP)</a>
         </div>
         
         <div class="resource-card">
@@ -39,10 +58,27 @@ import Header from '../components/Header.astro';
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.9 4.9 14.2 14.2"></path></svg>
           </div>
           <h3>Finish Palettes &amp; Patinas</h3>
-          <p>High-resolution swatches comparing powder coating vs. hand-applied living patinas such as blackened steel and oil-rubbed bronze.</p>
+          <p>Specify the exact visual intent for your project with our high-resolution surface treatment guides. Compare the durability and maintenance requirements of electrostatic powder coatings versus hand-applied living patinas like statuary bronze and blackened steel.</p>
+          <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem;">
+            <li>Chemical composition of living patinas</li>
+            <li>UV-resistance ratings for exterior coatings</li>
+            <li>Abrasive grit equivalents for satin and brushed finishes</li>
+          </ul>
           <a href="/materials" class="download-link text-link">View Materials Guide</a>
         </div>
       </div>
+
+      <div style="max-width: 900px; margin-top: var(--spacing-xl);">
+        <h2 style="color: var(--color-brushed-brass); font-size: 2.2rem; margin-bottom: 1rem;">Building Code Compliance & Life Safety</h2>
+        <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">We take life safety incredibly seriously. Every guardrail, handrail, and structural stair system engineered by Urban Forge is guaranteed to meet or exceed the rigorous standards set by the International Building Code (IBC) and local municipal codes.</p>
+        <ul style="font-size: 1.05rem; line-height: 1.7; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+          <li><strong>Structural Load Requirements:</strong> All our guardrail systems are engineered to withstand a concentrated load of 200 pounds applied in any direction at the top rail, or a uniform load of 50 pounds per linear foot.</li>
+          <li><strong>Infill Tolerances (The 4-Inch Rule):</strong> We provide shop drawings guaranteeing that pickets, glass panels, or tensioned cables are spaced securely so that a 4-inch diameter sphere cannot pass through any opening.</li>
+          <li><strong>Handrail Ergonomics & Continuity:</strong> Our handrail profiles are forged to strict graspability standards (typically 1.25 to 2 inches in cross-section) and engineered for continuous, uninterrupted runs along stair flights and landings.</li>
+        </ul>
+        <p style="font-size: 1.1rem; line-height: 1.7;">By partnering with Urban Forge during the specification phase, you eliminate the guesswork of code compliance, ensuring smooth inspections and long-lasting structural safety for your clients.</p>
+      </div>
+
     </div>
   </section>
   
