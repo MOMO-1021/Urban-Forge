@@ -27,12 +27,16 @@ html {
   color: var(--color-charcoal);
   line-height: 1.6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Typography */
@@ -104,15 +108,34 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  width: 100%;
 }
 
 .section {
   padding: var(--spacing-xxl) 0;
 }
 
+@media (max-width: 1024px) {
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
 .grid {
   display: grid;
   gap: var(--spacing-lg);
+}
+
+/* Constrain all visual content blocks */
+img, video, iframe {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Utility for full bleed backgrounds */

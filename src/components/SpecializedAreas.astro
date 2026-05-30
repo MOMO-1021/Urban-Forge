@@ -10,32 +10,54 @@
     </div>
     
     <div class="areas-grid">
-      <!-- Fireplace Screens -->
-      <a href="/custom-fireplace-screens" class="area-card">
+      <!-- Pillar 1 -->
+      <a href="/services/custom-metal-railings-new-york" class="area-card">
+        <div class="card-image">
+          <img src="/images/pillars/cad_render.png" alt="Architectural-Grade Metal Fabrication" loading="lazy" />
+        </div>
         <div class="card-content">
-          <h3>Custom Fireplace Screens</h3>
-          <p>Hand-forged heavy-duty safety mesh and precision fitment for any hearth.</p>
-          <span class="explore-btn">Explore Gallery &rarr;</span>
+          <h3>Architectural-Grade Metal Fabrication</h3>
+          <p>We don’t just bend metal. We engineer for longevity, load tolerances, and building codes. Every railing, gate, and staircase is designed to meet commercial-grade standards while looking residential-beautiful.</p>
+          <span class="explore-btn">See railings &rarr;</span>
         </div>
         <div class="card-bg"></div>
       </a>
 
-      <!-- Metal Railings -->
-      <a href="/custom-metal-railings-seattle" class="area-card">
+      <!-- Pillar 2 -->
+      <a href="/materials" class="area-card">
+        <div class="card-image">
+          <img src="/images/pillars/patina.png" alt="Bespoke Finishes & Patina Development" loading="lazy" />
+        </div>
         <div class="card-content">
-          <h3>Custom Metal Railings Seattle</h3>
-          <p>Code-compliant, master-crafted interior and exterior railings for the PNW.</p>
-          <span class="explore-btn">View Local Projects &rarr;</span>
+          <h3>Bespoke Finishes &amp; Patina Development</h3>
+          <p>From blackened steel to living bronze patinas, we custom-mix every finish in-house. Want a specific rust patina that won’t transfer to hands? Or a powder coat that matches your Benjamin Moore paint code? We do that.</p>
+          <span class="explore-btn">View finishes &rarr;</span>
         </div>
         <div class="card-bg"></div>
       </a>
 
-      <!-- Architectural Blacksmiths -->
-      <a href="/architectural-blacksmiths-near-me" class="area-card">
+      <!-- Pillar 3 -->
+      <a href="/contact" class="area-card">
+        <div class="card-image">
+          <img src="/images/pillars/installation.png" alt="Full-Service CAD-to-Installation" loading="lazy" />
+        </div>
         <div class="card-content">
-          <h3>Architectural Blacksmiths Near Me</h3>
-          <p>Experience true artistry. Genuine hand-forged metalwork from our local forge.</p>
-          <span class="explore-btn">See The Craft &rarr;</span>
+          <h3>Full-Service CAD-to-Installation</h3>
+          <p>Architects and designers receive detailed CAD drawings before a single cut is made. We handle permitting specs, engineering stamps, and white-glove installation. One point of contact from concept to completion.</p>
+          <span class="explore-btn">Request CAD consultation &rarr;</span>
+        </div>
+        <div class="card-bg"></div>
+      </a>
+
+      <!-- Pillar 4 -->
+      <a href="/portfolio" class="area-card">
+        <div class="card-image">
+          <img src="/images/pillars/joinery.png" alt="Heritage Joinery Without Welds" loading="lazy" />
+        </div>
+        <div class="card-content">
+          <h3>Heritage Joinery Without Welds (Visible Joints)</h3>
+          <p>Most shops over-weld. We specialize in hidden joinery and forged tenons that showcase traditional blacksmithing – a signature detail that separates mass-produced from museum-quality.</p>
+          <span class="explore-btn">See portfolio &rarr;</span>
         </div>
         <div class="card-bg"></div>
       </a>
@@ -104,13 +126,31 @@
     position: relative;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(212, 175, 55, 0.2);
-    padding: var(--spacing-xl) var(--spacing-lg);
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .area-card:hover .card-image img {
+    transform: scale(1.05);
   }
   
   .card-bg {
@@ -131,6 +171,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: var(--spacing-lg);
   }
   
   .area-card h3 {
